@@ -36,3 +36,9 @@ bootstrap-portfolio-template/
 ├── photography.html             # Professional Photography Portfolio
 ├── blog.html                    # Technical & Creative Blog Layouts
 └── contact.html                 # Contact Form & Categorized Social Network Anchors
+
+git add . 
+git commit -m "Initial commit"
+git push origin main
+git tag -m "tags"
+git push origin 

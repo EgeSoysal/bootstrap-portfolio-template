@@ -7,15 +7,85 @@
     
     <link rel="icon" type="image/x-icon" href="assets/images/logo.ico">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/init.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* --- ANA SAYFA (HERO) ÖZEL STİLLERİ --- */
+        .hero-section {
+            min-height: calc(100vh - 90px); /* Navbar yüksekliğini çıkar */
+            background-image: url('assets/images/dev.png');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Arka plan karartma overlay'i (Abartmadan) */
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.65); /* Karartma oranı (0.0 - 1.0) */
+            z-index: 1;
+        }
+
+        /* Yazıları overlay'in önüne çıkarma */
+        .hero-section .container {
+            position: relative;
+            z-index: 2; /* Arka plan karartmasının önünde */
+        }
+
+        /* Yazı renklerini beyazlatma */
+        .hero-section h1,
+        .hero-section h3,
+        .hero-section p.lead {
+            color: #ffffff !important;
+        }
+
+        .hero-section p.lead {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Okunabilirlik için hafif gölge */
+        }
+
+        /* --- YENİ EKLENEN BÖLÜM STİLLERİ --- */
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: var(--accent-color);
+        }
+        [data-bs-theme="light"] .feature-card {
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        /* Sosyal medya ikonları üzerine gelince renk değişimi */
+        .bi {
+            transition: color 0.3s ease;
+        }
+        .footer .bi:hover {
+            color: var(--accent-color) !important;
+        }
+
+        /* Sosyal medya ikonları hover efekti */
+        .gap-4 a:hover {
+            color: var(--accent-color) !important;
+        }
+
+        
+    </style>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top py-3">
         <div class="container">
@@ -24,7 +94,7 @@
                 <span class="fw-bold tracking-wide">EGE SOYSAL</span>
             </a>
             
-            <button class="navbar-expand-sm navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
@@ -39,7 +109,7 @@
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     
                     <li class="nav-item ms-lg-2">
-                        <button class="btn btn-outline-secondary theme-toggle-btn id="themeToggle" onclick="toggleTheme()">
+                        <button class="btn btn-outline-secondary theme-toggle-btn" id="themeToggle" onclick="toggleTheme()">
                             <i class="bi bi-sun-fill" id="themeIcon"></i>
                         </button>
                     </li>
@@ -47,30 +117,106 @@
             </div>
         </div>
     </nav>
-    <section class="hero-section bg-body">
+
+    <section class="hero-section text-white">
         <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6 text-center text-lg-start">
+            <div class="row">
+                <div class="col-lg-8 col-xl-7 mx-auto text-center"> 
                     <span class="badge text-bg-warning mb-3 px-3 py-2 text-white" style="background-color: var(--accent-color) !important;">Welcome to My Template</span>
-                    <h1 class="display-4 fw-bold mb-3">Hi, I'm <span style="color: var(--accent-color);">Ege Soysal</span></h1>
-                    <h3 class="text-secondary mb-4">Software Development Student & Photographer</h3>
-                    <p class="lead mb-4 text-body-secondary">
-                        This is a clean, responsive, and professional personal portfolio template built entirely with Bootstrap 5. You can easily customize this text, share your software projects, and showcase your photography gallery.
+                    
+                    <h1 class="display-3 fw-bold mb-3">Hi, I'm <span style="color: var(--accent-color);">Ege Soysal</span></h1>
+                    
+                    <h3 class="mb-4">Software Development Student & Photographer</h3>
+                    
+                    <p class="lead mb-5 text-white-50">
+                        This is a clean, responsive, and professional personal portfolio template built entirely with Bootstrap 5. The developer illustration is now a dimmed background, making your software projects and photography gallery the true focus.
                     </p>
-                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
-                        <a href="projects.html" class="btn btn-accent px-4 py-2">View My Work</a>
-                        <a href="contact.html" class="btn btn-outline-accent px-4 py-2">Let's Talk</a>
+                    
+                    <div class="d-flex gap-3 justify-content-center">
+                        <a href="projects.html" class="btn btn-accent btn-lg px-5 py-3">View My Work</a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg px-5 py-3">Let's Talk</a>
                     </div>
-                </div>
-                <div class="col-lg-6 text-center">
-                    <img src="assets/images/dev.png" alt="Developer Illustration" class="img-fluid hero-img">
                 </div>
             </div>
         </div>
     </section>
-    <footer class="bg-body-tertiary py-4 mt-auto">
+
+    <main class="py-5 bg-body">
+        <div class="container my-4">
+            
+            <div class="row g-4 mb-5">
+                <div class="col-md-6">
+                    <div class="h-100 p-4 bg-body-tertiary rounded-3 border border-secondary-subtle">
+                        <h2 class="h4 fw-bold text-uppercase mb-3" style="color: var(--accent-color);">Kısa Bir Özet</h2>
+                        <p class="text-body-secondary mb-3" style="text-align: justify; line-height: 1.7;">
+                            Teknoloji, yazılım ve dijital üretimi felsefe ve sanatla buluşturan bir yazılım öğrencisiyim. Derinlemesine öğrenmeyi, sürekli üretmeyi ve potansiyelimin sınırlarını zorlamayı amaçlıyorum.
+                        </p>
+                        <a href="about.html" class="text-decoration-none fw-semibold" style="color: var(--accent-color);">Devamını Oku <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="h-100 p-4 bg-body-tertiary rounded-3 border border-secondary-subtle">
+                        <h2 class="h4 fw-bold text-uppercase mb-3" style="color: var(--accent-color);">Vizyon & Sanat</h2>
+                        <p class="text-body-secondary mb-3" style="text-align: justify; line-height: 1.7;">
+                            Yazılımı ve teknolojiyi salt kod yığınları olarak değil, felsefi derinliği olan birer anlatım ve sanat aracı olarak görüyorum. Amacım yalnızca çalışan değil, anlamı olan işler ortaya koymak.
+                        </p>
+                        <a href="about.html" class="text-decoration-none fw-semibold" style="color: var(--accent-color);">Vizyonuma Göz At <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mb-4">
+                <h3 class="fw-bold">Neler Yapıyorum?</h3>
+                <p class="text-body-secondary">Çalışmalarıma ve uzmanlık alanlarıma doğrudan göz atın.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 bg-body-tertiary text-center p-4 feature-card rounded-3">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <i class="bi bi-code-slash display-4 mb-3" style="color: var(--accent-color);"></i>
+                            <h4 class="card-title fw-bold h5">Yazılım Projeleri</h4>
+                            <p class="card-text text-body-secondary small mt-2">
+                                C#, Flutter ve yapay zekâ odaklı geliştirdiğim açık kaynaklı ve bireysel projeler.
+                            </p>
+                            <a href="projects.html" class="btn btn-sm btn-outline-secondary mt-auto px-3">Projeleri İncele</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 bg-body-tertiary text-center p-4 feature-card rounded-3">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <i class="bi bi-cpu display-4 mb-3" style="color: var(--accent-color);"></i>
+                            <h4 class="card-title fw-bold h5">Teknoloji Stack'i</h4>
+                            <p class="card-text text-body-secondary small mt-2">
+                                Geliştirme süreçlerinde aktif olarak kullandığım diller, kütüphaneler ve araçlar.
+                            </p>
+                            <a href="skills.html" class="btn btn-sm btn-outline-secondary mt-auto px-3">Yetenekleri Gör</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 bg-body-tertiary text-center p-4 feature-card rounded-3">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <i class="bi bi-camera display-4 mb-3" style="color: var(--accent-color);"></i>
+                            <h4 class="card-title fw-bold h5">Fotoğraf Galeri</h4>
+                            <p class="card-text text-body-secondary small mt-2">
+                                Vizörden yansıyan, anı ve estetiği donduran kişisel karelerim ve sanatsal çalışmalarım.
+                            </p>
+                            <a href="photography.html" class="btn btn-sm btn-outline-secondary mt-auto px-3">Galeriye Git</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+<footer class="bg-body-tertiary py-4 mt-auto">
         <div class="container">
-            <div class="row align-items-center grey-text text-body-secondary small">
+            <div class="row align-items-center grey-text text-body-secondary small mb-3">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                     &copy; 2026 Ege Soysal. All rights reserved. Built with Bootstrap 5.
                 </div>
@@ -80,8 +226,21 @@
                     <a href="contact.html" class="text-decoration-none text-body-secondary">Contact</a>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="d-flex justify-content-center gap-4 fs-4">
+                        <a href="https://twitter.com/kullaniciadi" class="text-body-secondary" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://linkedin.com/in/kullaniciadi" class="text-body-secondary" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://github.com/EgeSoysal" class="text-body-secondary" title="GitHub"><i class="bi bi-github"></i></a>
+                        <a href="https://instagram.com/kullaniciadi" class="text-body-secondary" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://discord.com/users/kullaniciid" class="text-body-secondary" title="Discord"><i class="bi bi-discord"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <script>
@@ -91,10 +250,10 @@
             
             if (htmlTag.getAttribute('data-bs-theme') === 'dark') {
                 htmlTag.setAttribute('data-bs-theme', 'light');
-                themeIcon.className = 'bi bi-moon-fill'; // Açık temadayken ay ikonu göster
+                themeIcon.className = 'bi bi-moon-fill'; 
             } else {
                 htmlTag.setAttribute('data-bs-theme', 'dark');
-                themeIcon.className = 'bi bi-sun-fill';  // Koyu temadayken güneş ikonu göster
+                themeIcon.className = 'bi bi-sun-fill'; 
             }
         }
     </script>
