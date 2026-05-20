@@ -181,3 +181,431 @@ footer {
         column-count: 2; /* Mobilde bile şık durması için yan yana 2 kare */
     }
 }
+
+
+/* ========================================================================== */
+/* about.html — extracted embedded styles (originally inside <style> in about.html) */
+/* ========================================================================== */
+/* Bu sayfaya özel okunurluğu artıran ince ayarlar */
+.about-section h2 {
+    font-size: 1.75rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.about-section p {
+    line-height: 1.8;
+    text-align: justify;
+    font-weight: 400;
+}
+.about-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 2.5rem 0;
+}
+[data-bs-theme="light"] .about-divider {
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* Sosyal medya ikonları hover efekti (tekrar eden kurallar burada merkezi hale getirildi) */
+.bi { transition: color 0.3s ease; }
+.gap-4 a:hover { color: var(--accent-color) !important; }
+
+
+/* ========================================================================== */
+/* index.html — extracted embedded styles (originally inside <style> in index.html) */
+/* ========================================================================== */
+/* --- ANA SAYFA (HERO) ÖZEL STİLLERİ --- */
+.hero-section {
+    min-height: calc(100vh - 90px); /* Navbar yüksekliğini çıkar */
+    background-image: url('../images/dev.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Arka plan karartma overlay'i (Abartmadan) */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45); /* Karartma oranı (0.0 - 1.0) */
+    z-index: 1;
+}
+
+/* Yazıları overlay'in önüne çıkarma */
+.hero-section .container {
+    position: relative;
+    z-index: 2; /* Arka plan karartmasının önünde */
+}
+
+/* Yazı renklerini beyazlatma */
+.hero-section h1,
+.hero-section h3,
+.hero-section p.lead {
+    color: #ffffff !important;
+}
+
+.hero-section p.lead {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Okunabilirlik için hafif gölge */
+}
+
+/* --- YENİ EKLENEN BÖLÜM STİLLERİ --- */
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(216, 4, 4, 0.08);
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: var(--accent-color);
+}
+[data-bs-theme="light"] .feature-card {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Alt kısımlar için ikon hover merkezi kuralları */
+.footer .bi:hover {
+    color: var(--accent-color) !important;
+}
+
+
+/* ========================================================================== */
+/* skills.html — extracted embedded styles (originally inside <style> in skills.html) */
+/* ========================================================================== */
+/* Modern Bölüm Ayırıcıları */
+.skills-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 4rem 0;
+}
+[data-bs-theme="light"] .skills-divider {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Teknolojik Kart Tasarımları */
+.tech-card {
+    background-color: var(--bs-body-tertiary);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+[data-bs-theme="light"] .tech-card {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.tech-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-color);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.tech-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 10px;
+}
+[data-bs-theme="light"] .tech-icon-wrapper {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+.tech-icon-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Sertifika Kartı Stilleri */
+.cert-card {
+    background-color: var(--bs-body-tertiary);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+}
+[data-bs-theme="light"] .cert-card {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.cert-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-color);
+}
+.cert-img-wrapper {
+    height: 160px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+[data-bs-theme="light"] .cert-img-wrapper {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.cert-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.cert-card:hover .cert-img-wrapper img {
+    transform: scale(1.04);
+}
+
+
+/* ========================================================================== */
+/* projects.html — extracted embedded styles (originally inside <style> in projects.html) */
+/* ========================================================================== */
+.project-card {
+    background-color: var(--bs-body-tertiary);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+}
+
+[data-bs-theme="light"] .project-card {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-color);
+}
+
+/* Sol Taraftaki Görsel Alanı */
+.project-img-wrapper {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .project-img-wrapper {
+        width: 260px;
+        height: 100%;
+        min-height: 180px;
+    }
+}
+
+.project-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* collapse açıldığında dönen ok animasyonu */
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+.project-card[aria-expanded="true"] .toggle-icon {
+    transform: rotate(180deg);
+    color: var(--accent-color) !important;
+}
+
+/* Genişleyen detay alanı stili */
+.project-details {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+[data-bs-theme="light"] .project-details {
+    background-color: rgba(0, 0, 0, 0.02);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+
+/* ========================================================================== */
+/* photography.html — extracted embedded styles (originally inside <style> in photography.html) */
+/* ========================================================================== */
+.year-sidebar .nav-link {
+    color: var(--bs-secondary-color);
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+.year-sidebar .nav-link:hover {
+    color: var(--accent-color);
+    background-color: rgba(255, 107, 0, 0.05);
+}
+.year-sidebar .nav-link.active {
+    color: #ffffff !important;
+    background-color: var(--accent-color) !important;
+}
+[data-bs-theme="light"] .year-sidebar .nav-link.active {
+    color: #ffffff !important;
+}
+
+/* Fotoğraf Kartı ve Üzerine Gelince Çıkan Açıklama Katmanı */
+.gallery-card {
+    position: relative;
+    background-color: transparent;
+    break-inside: avoid;
+    margin-bottom: 8px;
+    overflow: hidden;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Karartma Overlay Katmanı */
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75); /* Karartma oranı */
+    display: flex;
+    flex-column: column;
+    justify-content: flex-end;
+    padding: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+/* İmleç üzerine gelince tetiklenenler */
+.gallery-card:hover img {
+    transform: scale(1.03);
+}
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* Yazıların Küçüklüğü ve Tipografisi */
+.overlay-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.overlay-meta {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Filtreleme Geçiş Animasyonu */
+.gallery-card.d-none {
+    display: none !important;
+}
+
+
+/* ========================================================================== */
+/* blog.html — extracted embedded styles (originally inside <style> in blog.html) */
+/* ========================================================================== */
+.blog-card {
+    background-color: var(--bs-body-tertiary);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: border-color 0.2s ease;
+    position: relative;
+}
+[data-bs-theme="light"] .blog-card {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.blog-card:hover {
+    border-color: var(--accent-color);
+}
+.blog-img-wrapper {
+    max-height: 400px;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.blog-img-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.add-post-btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    color: #ffffff !important;
+    border: none;
+    transition: transform 0.2s ease;
+}
+.add-post-btn:hover {
+    transform: scale(1.1);
+}
+.post-menu-btn {
+    background: none;
+    border: none;
+    color: var(--bs-secondary-color);
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: color 0.2s, background-color 0.2s;
+}
+.post-menu-btn:hover, .post-menu-btn:focus {
+    color: var(--bs-body-color);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+[data-bs-theme="light"] .post-menu-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.dropdown-menu-end {
+    right: 0;
+    left: auto;
+}
+
+
+/* ========================================================================== */
+/* contact.html — extracted embedded styles (originally inside <style> in contact.html) */
+/* ========================================================================== */
+.contact-icon-box {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--accent-color);
+    font-size: 1.25rem;
+    transition: all 0.2s ease;
+}
+[data-bs-theme="light"] .contact-icon-box {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.contact-link-row:hover .contact-icon-box {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+.form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.25rem rgba(239, 125, 0, 0.25);
+}
+
+/* ========================================================================== */
+/* End of extracted embedded styles */
+/* ========================================================================== */

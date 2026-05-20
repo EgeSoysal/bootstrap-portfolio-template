@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ege Soysal | Portfolio Template</title>
+    <title>Home</title>
     
     <link rel="icon" type="image/x-icon" href="assets/images/logo.ico">
 
@@ -13,77 +13,7 @@
     
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <style>
-        /* --- ANA SAYFA (HERO) ÖZEL STİLLERİ --- */
-        .hero-section {
-            min-height: calc(100vh - 90px); /* Navbar yüksekliğini çıkar */
-            background-image: url('assets/images/dev.png');
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-
-        /* Arka plan karartma overlay'i (Abartmadan) */
-        .hero-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.65); /* Karartma oranı (0.0 - 1.0) */
-            z-index: 1;
-        }
-
-        /* Yazıları overlay'in önüne çıkarma */
-        .hero-section .container {
-            position: relative;
-            z-index: 2; /* Arka plan karartmasının önünde */
-        }
-
-        /* Yazı renklerini beyazlatma */
-        .hero-section h1,
-        .hero-section h3,
-        .hero-section p.lead {
-            color: #ffffff !important;
-        }
-
-        .hero-section p.lead {
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Okunabilirlik için hafif gölge */
-        }
-
-        /* --- YENİ EKLENEN BÖLÜM STİLLERİ --- */
-        .feature-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            border-color: var(--accent-color);
-        }
-        [data-bs-theme="light"] .feature-card {
-            border: 1px solid rgba(0, 0, 0, 0.08);
-        }
-
-        /* Sosyal medya ikonları üzerine gelince renk değişimi */
-        .bi {
-            transition: color 0.3s ease;
-        }
-        .footer .bi:hover {
-            color: var(--accent-color) !important;
-        }
-
-        /* Sosyal medya ikonları hover efekti */
-        .gap-4 a:hover {
-            color: var(--accent-color) !important;
-        }
-
-        
-    </style>
+    <!-- Page-specific styles moved to assets/css/style.css -->
 </head>
 <body class="d-flex flex-column min-vh-100">
 
@@ -147,27 +77,27 @@
             <div class="row g-4 mb-5">
                 <div class="col-md-6">
                     <div class="h-100 p-4 bg-body-tertiary rounded-3 border border-secondary-subtle">
-                        <h2 class="h4 fw-bold text-uppercase mb-3" style="color: var(--accent-color);">Kısa Bir Özet</h2>
+                        <h2 class="h4 fw-bold text-uppercase mb-3" style="color: var(--accent-color);">A Short Summary</h2>
                         <p class="text-body-secondary mb-3" style="text-align: justify; line-height: 1.7;">
-                            Teknoloji, yazılım ve dijital üretimi felsefe ve sanatla buluşturan bir yazılım öğrencisiyim. Derinlemesine öğrenmeyi, sürekli üretmeyi ve potansiyelimin sınırlarını zorlamayı amaçlıyorum.
+                            I am a software student blending technology, software, and digital production with philosophy and art. I aim to learn deeply, continuously produce, and push the boundaries of my potential.
                         </p>
-                        <a href="about.html" class="text-decoration-none fw-semibold" style="color: var(--accent-color);">Devamını Oku <i class="bi bi-arrow-right"></i></a>
+                        <a href="about.html" class="text-decoration-none fw-semibold" style="color: var(--accent-color);">Read More... <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="h-100 p-4 bg-body-tertiary rounded-3 border border-secondary-subtle">
-                        <h2 class="h4 fw-bold text-uppercase mb-3" style="color: var(--accent-color);">Vizyon & Sanat</h2>
+                        <h2 class="h4 fw-bold text-uppercase mb-3" style="color: var(--accent-color);">Vision & Art</h2>
                         <p class="text-body-secondary mb-3" style="text-align: justify; line-height: 1.7;">
-                            Yazılımı ve teknolojiyi salt kod yığınları olarak değil, felsefi derinliği olan birer anlatım ve sanat aracı olarak görüyorum. Amacım yalnızca çalışan değil, anlamı olan işler ortaya koymak.
+                            I view software and technology not merely as stacks of code, but as tools of artistic expression with philosophical depth. My goal is to create works that are not just functional, but meaningful.
                         </p>
-                        <a href="about.html" class="text-decoration-none fw-semibold" style="color: var(--accent-color);">Vizyonuma Göz At <i class="bi bi-arrow-right"></i></a>
+                        <a href="about.html" class="text-decoration-none fw-semibold" style="color: var(--accent-color);">View My Vision <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
 
             <div class="text-center mb-4">
-                <h3 class="fw-bold">Neler Yapıyorum?</h3>
-                <p class="text-body-secondary">Çalışmalarıma ve uzmanlık alanlarıma doğrudan göz atın.</p>
+                <h3 class="fw-bold">What I Do</h3>
+                <p class="text-body-secondary">Take a direct look at my projects and areas of expertise.</p>
             </div>
 
             <div class="row g-4">
@@ -175,11 +105,11 @@
                     <div class="card h-100 bg-body-tertiary text-center p-4 feature-card rounded-3">
                         <div class="card-body d-flex flex-column align-items-center">
                             <i class="bi bi-code-slash display-4 mb-3" style="color: var(--accent-color);"></i>
-                            <h4 class="card-title fw-bold h5">Yazılım Projeleri</h4>
+                            <h4 class="card-title fw-bold h5">My Projects</h4>
                             <p class="card-text text-body-secondary small mt-2">
-                                C#, Flutter ve yapay zekâ odaklı geliştirdiğim açık kaynaklı ve bireysel projeler.
+                                Open source and personal projects I developed with a focus on C#, Flutter, and artificial intelligence.
                             </p>
-                            <a href="projects.html" class="btn btn-sm btn-outline-secondary mt-auto px-3">Projeleri İncele</a>
+                            <a href="projects.html" class="btn btn-sm btn-outline-secondary mt-auto px-3">View Projects</a>
                         </div>
                     </div>
                 </div>
@@ -188,11 +118,11 @@
                     <div class="card h-100 bg-body-tertiary text-center p-4 feature-card rounded-3">
                         <div class="card-body d-flex flex-column align-items-center">
                             <i class="bi bi-cpu display-4 mb-3" style="color: var(--accent-color);"></i>
-                            <h4 class="card-title fw-bold h5">Teknoloji Stack'i</h4>
+                            <h4 class="card-title fw-bold h5">Tech Stack</h4>
                             <p class="card-text text-body-secondary small mt-2">
-                                Geliştirme süreçlerinde aktif olarak kullandığım diller, kütüphaneler ve araçlar.
+                                Languages, libraries, and tools I actively use in development processes.
                             </p>
-                            <a href="skills.html" class="btn btn-sm btn-outline-secondary mt-auto px-3">Yetenekleri Gör</a>
+                            <a href="skills.html" class="btn btn-sm btn-outline-secondary mt-auto px-3">View Skills</a>
                         </div>
                     </div>
                 </div>
@@ -201,11 +131,11 @@
                     <div class="card h-100 bg-body-tertiary text-center p-4 feature-card rounded-3">
                         <div class="card-body d-flex flex-column align-items-center">
                             <i class="bi bi-camera display-4 mb-3" style="color: var(--accent-color);"></i>
-                            <h4 class="card-title fw-bold h5">Fotoğraf Galeri</h4>
+                            <h4 class="card-title fw-bold h5">Photography</h4>
                             <p class="card-text text-body-secondary small mt-2">
-                                Vizörden yansıyan, anı ve estetiği donduran kişisel karelerim ve sanatsal çalışmalarım.
+                                Art.. Art.. Art...
                             </p>
-                            <a href="photography.html" class="btn btn-sm btn-outline-secondary mt-auto px-3">Galeriye Git</a>
+                            <a href="photography.html" class="btn btn-sm btn-outline-secondary mt-auto px-3">Go to Gallery</a>
                         </div>
                     </div>
                 </div>
@@ -230,11 +160,11 @@
             <div class="row">
                 <div class="col-12 text-center">
                     <div class="d-flex justify-content-center gap-4 fs-4">
-                        <a href="https://twitter.com/kullaniciadi" class="text-body-secondary" title="Twitter"><i class="bi bi-twitter-x"></i></a>
-                        <a href="https://linkedin.com/in/kullaniciadi" class="text-body-secondary" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://x.com/EgeeSoysal" class="text-body-secondary" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.linkedin.com/in/soysalege" class="text-body-secondary" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
                         <a href="https://github.com/EgeSoysal" class="text-body-secondary" title="GitHub"><i class="bi bi-github"></i></a>
-                        <a href="https://instagram.com/kullaniciadi" class="text-body-secondary" title="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="https://discord.com/users/kullaniciid" class="text-body-secondary" title="Discord"><i class="bi bi-discord"></i></a>
+                        <a href="https://instagram.com/egesoysals" class="text-body-secondary" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://discord.gg/szfgv8pNxR" class="text-body-secondary" title="Discord"><i class="bi bi-discord"></i></a>
                     </div>
                 </div>
             </div>

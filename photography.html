@@ -9,94 +9,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        /* Sol Menü / Sidebar Link Stilleri */
-        .year-sidebar .nav-link {
-            color: var(--bs-secondary-color);
-            font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 4px;
-            transition: all 0.2s ease;
-        }
-        .year-sidebar .nav-link:hover {
-            color: var(--accent-color);
-            background-color: rgba(255, 107, 0, 0.05);
-        }
-        .year-sidebar .nav-link.active {
-            color: #ffffff !important;
-            background-color: var(--accent-color) !important;
-        }
-        [data-bs-theme="light"] .year-sidebar .nav-link.active {
-            color: #ffffff !important;
-        }
-
-        /* Fotoğraf Kartı ve Üzerine Gelince Çıkan Açıklama Katmanı */
-        .gallery-card {
-            position: relative;
-            background-color: transparent;
-            break-inside: avoid;
-            margin-bottom: 8px;
-            overflow: hidden;
-            border-radius: 2px;
-            cursor: pointer;
-        }
-        
-        .gallery-card img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-            transition: transform 0.4s ease, filter 0.4s ease;
-        }
-
-        /* Karartma Overlay Katmanı */
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.75); /* Karartma oranı */
-            display: flex;
-            flex-column: column;
-            justify-content: flex-end;
-            padding: 12px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 2;
-        }
-
-        /* İmleç üzerine gelince tetiklenenler */
-        .gallery-card:hover img {
-            transform: scale(1.03);
-        }
-        .gallery-card:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        /* Yazıların Küçüklüğü ve Tipografisi */
-        .overlay-title {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 2px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .overlay-meta {
-            font-size: 0.75rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        /* Filtreleme Geçiş Animasyonu */
-        .gallery-card.d-none {
-            display: none !important;
-        }
-
-        /* Sosyal medya ikonları hover efekti */
-        .bi { transition: color 0.3s ease; }
-        .gap-4 a:hover { color: var(--accent-color) !important; }
-    </style>
+    <!-- Page-specific styles moved to assets/css/style.css -->
 </head>
 <body class="d-flex flex-column min-vh-100">
 
@@ -254,12 +167,12 @@
             <div class="row">
             <div class="col-12 text-center">
                 <div class="d-flex justify-content-center gap-4 fs-4">
-                    <a href="https://twitter.com/kullaniciadi" class="text-body-secondary" title="Twitter"><i class="bi bi-twitter-x"></i></a>
-                    <a href="https://linkedin.com/in/kullaniciadi" class="text-body-secondary" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                    <a href="https://github.com/EgeSoysal" class="text-body-secondary" title="GitHub"><i class="bi bi-github"></i></a>
-                    <a href="https://instagram.com/kullaniciadi" class="text-body-secondary" title="Instagram"><i class="bi bi-instagram"></i></a>
-                    <a href="https://discord.com/users/kullaniciid" class="text-body-secondary" title="Discord"><i class="bi bi-discord"></i></a>
-                </div>
+                        <a href="https://x.com/EgeeSoysal" class="text-body-secondary" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.linkedin.com/in/soysalege" class="text-body-secondary" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://github.com/EgeSoysal" class="text-body-secondary" title="GitHub"><i class="bi bi-github"></i></a>
+                        <a href="https://instagram.com/egesoysals" class="text-body-secondary" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://discord.gg/szfgv8pNxR" class="text-body-secondary" title="Discord"><i class="bi bi-discord"></i></a>
+                    </div>
             </div>
         </div>
         </div>
