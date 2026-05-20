@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Ege Soysal</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Bu sayfaya özel okunurluğu artıran ince ayarlar */
+        .about-section h2 {
+            font-size: 1.75rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        .about-section p {
+            line-height: 1.8;
+            text-align: justify;
+            font-weight: 400;
+        }
+        .about-divider {
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            margin: 2.5rem 0;
+        }
+        [data-bs-theme="light"] .about-divider {
+            border-top: 1px solid rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/images/logo.png" alt="Logo" width="40" height="40">
+                <span class="fw-bold tracking-wide">EGE SOYSAL</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="photography.html">Photography</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <button class="btn btn-outline-secondary theme-toggle-btn" id="themeToggle" onclick="toggleTheme()">
+                            <i class="bi bi-sun-fill" id="themeIcon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container my-5 flex-grow-1 about-section" style="max-width: 900px;">
+        
+        <section class="mb-4">
+            <h2 class="text-uppercase mb-3" style="color: var(--accent-color);">HAKKIMDA</h2>
+            <p class="text-body-secondary">
+                Ben Ege Soysal. 2006 yılında Adana'da doğdum. Çocukluğumdan itibaren bilgisayarlar ve kameralar hayatımın doğal bir parçası oldu. Teknolojiyle kurduğum bu erken bağ, zamanla yalnızca tüketen değil, üreten biri olma isteğine dönüştü. Küçük yaşlardan itibaren kendi kendime öğrenmeye, denemeye ve ortaya somut işler koymaya çalıştım. Bu süreçte yazılım, teknoloji ve dijital üretim alanlarında kendimi geliştirmeye odaklandım. Farklı disiplinlerde projeler üretmeye çalıştım; bazıları tamamlandı, bazıları ise bana deneyim kazandırdı. Bugün geldiğim noktada, üretmenin ve öğrenmenin birbirinden ayrılmaz olduğuna inanıyorum. Bu yüzden odağım hâlâ gelişmek, daha iyisini yapmak ve sınırlarımı zorlamak. Şu anda Bilgisayar Programcılığı ön lisans programında eğitim alıyorum. Akademik eğitimimi, bireysel çalışmalarla desteklemeye özen gösteriyorum. Öğrendiğim yazılım dilleriyle küçük ölçekli konsol projeleri geliştiriyor, bu projeleri GitHub üzerinden paylaşarak hem kendimi disipline ediyor hem de ilerlememi kayıt altına alıyorum. Bunun yanı sıra makine öğrenimi, veri bilimi ve büyük dil modelleri (LLM) üzerine bağımsız araştırmalar yapıyorum. Bu alanlarda yalnızca yüzeysel bilgilerle yetinmek yerine, mantığını anlamaya ve gerçek kullanım senaryoları üzerinden düşünmeye çalışıyorum. Yapay zekânın yalnızca bir trend değil, uzun vadeli bir dönüşüm olduğuna inanıyor ve bu dönüşümün parçası olmayı hedefliyorum. Vaktimin büyük kısmını çalışarak, öğrenerek ve üreterek geçiriyorum. Kısa vadeli sonuçlardan çok, uzun vadede sağlam bir temel oluşturmayı önemsiyorum. Amacım; teknoloji, yazılım ve yapay zekâ alanlarında derinleşerek, değer üreten projeler geliştirmek ve bu projeleri sürdürülebilir hâle getirmek.
+            </p>
+        </section>
+
+        <div class="about-divider"></div>
+
+        <section class="mb-4">
+            <h2 class="text-uppercase mb-3" style="color: var(--accent-color);">VİZYON</h2>
+            <p class="text-body-secondary">
+                Lise yıllarım boyunca yalnızca teknik alanlara değil; felsefeye, farklı halklara, kültürlere ve düşünce sistemlerine de yoğun ilgi duydum. Aynı dönemde astronomi üzerine araştırmalar yaparak evrenin yapısı, zaman kavramı ve insanın bu büyük sistem içindeki yeri üzerine düşünme fırsatı buldum. Gerek felsefe gerekse astronomi, bana insanın ne kadar küçük ama aynı zamanda ne kadar büyük bir potansiyele sahip olduğunu gösteri. Farklı kültürleri, inanç sistemlerini ve yaşam biçimlerini incelemek; astronomiyle birlikte evrene daha geniş bir perspektiften bakmamı sağladı. Bu süreçte, tek bir doğruya ya da tek bir bakış açısına saplanmanın insanı sınırlandırdığını fark ettim. Hayatın anlamının, şartlar ne olursa olsun insanın kendi potansiyelinin zirvesini görmeye çalışması ve bu potansiyeli hayata geçirmesi olduğuna inanmaya başladım. Benim için bu anlayış; yalnızca tek bir alanda ilerlemek değil, birçok alanda gelişmek, öğrendiklerimi bir araya getirerek somut ürünler ortaya koymak anlamına geliyor. Bilginin ancak üretime dönüştüğünde değer kazandığını, üretimin ise paylaşıldıkça çoğaldığını düşünüyorum. Bu nedenle geliştirdiğim projelerin, ortaya koyduğum fikirlerin ve yaptığım çalışmaların yalnızca bana değil, başkalarına da katkı sağlamasını önemsiyorum. Vizyonum; teknoloji, yazılım ve yapay zekâ başta olmak üzere ilgilendiğim alanlarda derinleşirken, bu bilgileri daha geniş bir düşünsel çerçeveyle birleştirmektir. Evreni anlamaya çalışmanın verdiği merakla, insanı ve toplumu anlamaya yönelik felsefi bakışı, teknik üretimle buluşturmayı hedefliyorum. Böylece yalnızca çalışan sistemler değil, anlamı olan işler ortaya koymak istiyorum. Hayatıma dair aldığım kararlar, hedeflerim ve genel bakış açım bu anlayış üzerine kurulu. Kısa vadeli başarılar yerine, uzun vadede sürdürülebilir bir gelişim ve sürekli öğrenme kültürü inşa etmeyi önemsiyorum. Bu yolculukta yeni fikirlere, farklı düşüncelere ve benden farklı insanlara her zaman ihtiyaç duyacağımın farkındayım. Çünkü gerçek gelişimin; merak etmekten, sorgulamaktan ve paylaşımdan geçtiğine inanıyorum. Vizyonum, potansiyelimin sınırlarını zorlayan, öğrenmeye açık ve sürekli üreten bir yaşam inşa etmek üzerine kurulu.
+            </p>
+        </section>
+
+        <div class="about-divider"></div>
+
+        <section class="mb-4">
+            <h2 class="text-uppercase mb-3" style="color: var(--accent-color);">SANAT</h2>
+            <p class="text-body-secondary">
+                Benim için sanat, yalnızca estetik üretmek ya da bir şeyleri "güzel" göstermek değildir. Sanat; düşünceyi, bilgiyi ve üretimi bir araya getirerek anlamlı bir bütün hâline getirme biçimidir. Ürettiğim her şeyin, hangi alandan çıkarsa çıksın, sanatla bir bağ kurmasını bu yüzden önemsiyorum. Yazılım, teknoloji, yapay zekâ ya da veri; benim için başlı başına bir anlatım araçlarıdır. Üretim sürecimde teknik yeterlilik kadar, o üretimin ne anlattığı ve ne hissettirdiği de belirleyicidir. Ortaya çıkan işin yalnızca çalışıyor olması değil, bir düşünceyi taşıması, bir soru sorması ve izleyen ya da kullanan kişide bir iz bırakması gerektiğine inanıyorum. Bu yüzden ürettiklerimi, salt fonksiyonel ürünler olarak değil; anlatısı olan, bağlamı olan ve yorumlanabilir işler olarak konumlandırıyorum. Sanatı, hayatın geri kalanından ayrı bir alan olarak görmüyorum. Aksine, yaptığım her çalışmanın sanatla temas etmesini bilinçli bir tercih olarak benimsiyorum. Teknolojiyle sanat arasındaki sınırların giderek silikleştiği bir çağda, bu iki alanı birbirinden koparmak yerine, iç içe geçirmenin daha anlamlı ve daha güçlü sonuçlar doğurduğunu düşünüyorum. Benim üretim anlayışımda sanat; deneysel, sorgulayıcı ve açık uçludur. Net cevaplar vermekten çok, doğru soruları sormayı önemser. Bu yaklaşım, beni farklı disiplinlerden beslenmeye, alışılmış kalıpların dışına çıkmaya ve yeni anlatım biçimleri aramaya yönlendiriyor. Her proje, hem teknik hem de sanatsal açıdan bir keşif alanı olarak ele alınıyor. Ne Üretirsem Üreteyim, sanatla kurduğum bu bağın korunmasını temel bir ilke olarak görüyorum. Çünkü benim için gerçek değer, yalnızca bir şey ortaya koymakta değil; o şeyin anlam, duygu ve düşünceyle harmanlanabilmektedir. Sanat, tüm üretimlerimin ortak dili ve değişmeyen referans noktasıdır.
+            </p>
+        </section>
+
+        <div class="about-divider"></div>
+
+        <section class="mb-4">
+            <h2 class="text-uppercase mb-3" style="color: var(--accent-color);">GELECEK</h2>
+            <p class="text-body-secondary">
+                Liseden sonra mezun bir dönem geçirdim. Sınavın en kritik anında yaşadığım migren atağı nedeniyle Türkiye Genelinde'ki denemelerde elde ettiğim sıralamayı elde edemedim ve bu nedenle şu anda ön lisans eğitimi alıyorum. Bu durumu bir duraklama değil, daha sağlam bir temel oluşturma süreci olarak görüyorum. Gelecekte, yapay zekâ ve makine öğrenimi alanında önce Türkiye'de lisans eğitimimi tamamlamayı, ardından Amerika'da bu alanda yüksek lisans yapmayı hedefliyorum. Amacım, hak ettiğim akademik ve üretken ortamda derinleşerek ana hedefime odaklanmak ve bu hedef doğrultusunda çalışmalarımı sürdürmektir. Şu anda önceliğim; GitHub üzerinde daha fazla proje paylaşmak, yapay zekâ ve makine öğrenimi araştırmalarıma devam etmek ve bu teknik üretimi fotoğrafçılıkla birlikte sürdürerek çok yönlü bir üretim anlayışı geliştirmek.
+            </p>
+        </section>
+
+    </main>
+    <footer class="bg-body-tertiary py-4 mt-auto">
+        <div class="container">
+            <div class="row align-items-center text-body-secondary small">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; 2026 Ege Soysal. All rights reserved. Built with Bootstrap 5.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-decoration-none text-body-secondary me-3">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none text-body-secondary me-3">Terms & Conditions</a>
+                    <a href="contact.html" class="text-decoration-none text-body-secondary">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        function toggleTheme() {
+            const htmlTag = document.documentElement;
+            const themeIcon = document.getElementById('themeIcon');
+            if (htmlTag.getAttribute('data-bs-theme') === 'dark') {
+                htmlTag.setAttribute('data-bs-theme', 'light');
+                themeIcon.className = 'bi bi-moon-fill';
+            } else {
+                htmlTag.setAttribute('data-bs-theme', 'dark');
+                themeIcon.className = 'bi bi-sun-fill';
+            }
+        }
+    </script>
+</body>
+</html>

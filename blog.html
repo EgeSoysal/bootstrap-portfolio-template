@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Ege Soysal</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Blog Kartı Temel Stilleri */
+        .blog-card {
+            background-color: var(--bs-body-tertiary);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            transition: border-color 0.2s ease;
+            position: relative;
+        }
+        [data-bs-theme="light"] .blog-card {
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .blog-card:hover {
+            border-color: var(--accent-color);
+        }
+        .blog-img-wrapper {
+            max-height: 400px;
+            overflow: hidden;
+            border-radius: 4px;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        .blog-img-wrapper img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        /* Sabit Ekleme Butonu (+) */
+        .add-post-btn {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            color: #ffffff !important;
+            border: none;
+            transition: transform 0.2s ease;
+        }
+        .add-post-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Üç Nokta Dropdown Buton Tasarımı */
+        .post-menu-btn {
+            background: none;
+            border: none;
+            color: var(--bs-secondary-color);
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: color 0.2s, background-color 0.2s;
+        }
+        .post-menu-btn:hover, .post-menu-btn:focus {
+            color: var(--bs-body-color);
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+        [data-bs-theme="light"] .post-menu-btn:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Dropdown menünün sağa taşmasını engelleme */
+        .dropdown-menu-end {
+            right: 0;
+            left: auto;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/images/logo.png" alt="Logo" width="40" height="40">
+                <span class="fw-bold tracking-wide">EGE SOYSAL</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="photography.html">Photography</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <button class="btn btn-outline-secondary theme-toggle-btn" id="themeToggle" onclick="toggleTheme()">
+                            <i class="bi bi-sun-fill" id="themeIcon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container my-5 flex-grow-1" style="max-width: 800px;">
+        
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <div>
+                <h1 class="display-5 fw-bold" style="color: var(--accent-color);">Blog</h1>
+                <p class="text-secondary mb-0">Düşünceler, notlar ve teknik yazılar.</p>
+            </div>
+            <button class="add-post-btn shadow" onclick="openCreateModal()" title="Yeni Gönderi Ekle">
+                <i class="bi bi-plus-lg fs-4"></i>
+            </button>
+        </div>
+
+        <div class="d-flex flex-column gap-4" id="blogContainer">
+            </div>
+
+    </main>
+    <div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="createPostModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-body-tertiary border-secondary-subtle">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title fw-bold" id="createPostModalLabel">Yeni Gönderi Oluştur</h5>
+                    <button type="button" class="btn-close" data-bs-shadow="none" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="postForm">
+                        <input type="hidden" id="editPostId" value="">
+
+                        <div class="mb-3">
+                            <label for="postTitle" class="form-label small fw-bold">Başlık</label>
+                            <input type="text" class="form-control" id="postTitle" required placeholder="Yazı başlığını girin...">
+                        </div>
+                        <div class="mb-3">
+                            <label for="postContent" class="form-label small fw-bold">Açıklama / İçerik</label>
+                            <textarea class="form-control" id="postContent" rows="4" required placeholder="Bir şeyler yazın..."></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="postImage" class="form-label small fw-bold">Görsel (Boş bırakılırsa mevcut görsel korunur veya görselsiz kalır)</label>
+                            <input class="form-control" type="file" id="postImage" accept="image/*">
+                        </div>
+                        <div class="text-end mt-4">
+                            <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">İptal</button>
+                            <button type="submit" class="btn btn-warning text-white fw-bold" style="background-color: var(--accent-color); border:none;">Kaydet</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-body-tertiary py-4 mt-auto">
+        <div class="container">
+            <div class="row align-items-center text-body-secondary small">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; 2026 Ege Soysal. All rights reserved. Built with Bootstrap 5.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-decoration-none text-body-secondary me-3">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none text-body-secondary me-3">Terms & Conditions</a>
+                    <a href="contact.html" class="text-decoration-none text-body-secondary">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+        // Sayfa açıldığında verileri hafızadan yükle
+        document.addEventListener("DOMContentLoaded", () => {
+            loadPosts();
+        });
+
+        // Yeni Gönderi Butonuna Basıldığında Formu Sıfırla ve Başlığı Düzelt
+        function openCreateModal() {
+            document.getElementById('postForm').reset();
+            document.getElementById('editPostId').value = ""; // ID alanını temizle
+            document.getElementById('createPostModalLabel').innerText = "Yeni Gönderi Oluştur";
+            
+            const modal = new bootstrap.Modal(document.getElementById('createPostModal'));
+            modal.show();
+        }
+
+        // Form Gönderildiğinde Tetiklenen Alan
+        document.getElementById('postForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const id = document.getElementById('editPostId').value;
+            const title = document.getElementById('postTitle').value;
+            const content = document.getElementById('postContent').value;
+            const imageFile = document.getElementById('postImage').files[0];
+
+            if (imageFile) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    processPost(id, title, content, event.target.result);
+                };
+                reader.readAsDataURL(imageFile);
+            } else {
+                // Düzenleme modundaysa ve yeni resim seçilmediyse eski resmi koru
+                let currentImage = null;
+                if (id) {
+                    const posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+                    const existingPost = posts.find(p => p.id == id);
+                    if (existingPost) currentImage = existingPost.image;
+                }
+                processPost(id, title, content, currentImage);
+            }
+        });
+
+        // Yazıyı Ekleme veya Güncelleme Mantığı
+        function processPost(id, title, content, imageSrc) {
+            let posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+
+            if (id) {
+                // DÜZENLEME (UPDATE) MODU
+                posts = posts.map(post => {
+                    if (post.id == id) {
+                        return {
+                            ...post,
+                            title: title,
+                            content: content,
+                            image: imageSrc
+                        };
+                    }
+                    return post;
+                });
+            } else {
+                // YENİ EKLEME (CREATE) MODU
+                const newPost = {
+                    id: Date.now(),
+                    title: title,
+                    content: content,
+                    image: imageSrc,
+                    date: new Date().toLocaleDateString('tr-TR')
+                };
+                posts.unshift(newPost);
+            }
+
+            localStorage.setItem('blogPosts', JSON.stringify(posts));
+
+            // Modalı Kapatma
+            const modalElement = document.getElementById('createPostModal');
+            const modal = bootstrap.Modal.getInstance(modalElement) || bootstrap.Modal.getOrCreateInstance(modalElement);
+            modal.hide();
+
+            loadPosts();
+        }
+
+        // Yazıyı Düzenleme Moduna Alıp Modalı Açan Fonksiyon
+        function editPost(id) {
+            const posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+            const post = posts.find(p => p.id == id);
+
+            if (post) {
+                document.getElementById('editPostId').value = post.id;
+                document.getElementById('postTitle').value = post.title;
+                document.getElementById('postContent').value = post.content;
+                document.getElementById('createPostModalLabel').innerText = "Gönderiyi Düzenle";
+
+                const modalElement = document.getElementById('createPostModal');
+                const modal = bootstrap.Modal.getInstance(modalElement) || bootstrap.Modal.getOrCreateInstance(modalElement);
+                modal.show();
+            }
+        }
+
+        // Yazıyı Hafızadan Silen Fonksiyon
+        function deletePost(id) {
+            if (confirm("Bu blog yazısını silmek istediğinize emin misiniz?")) {
+                let posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+                posts = posts.filter(post => post.id != id);
+                localStorage.setItem('blogPosts', JSON.stringify(posts));
+                loadPosts();
+            }
+        }
+
+        // Gönderileri Arayüze Basma Motoru
+        function loadPosts() {
+            const container = document.getElementById('blogContainer');
+            let posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+
+            // Eğer lokal hafıza tamamen boşsa şablon olarak 2 örnek yükle
+            if (posts.length === 0) {
+                posts = [
+                    {
+                        id: 111,
+                        title: "Yazılım Dünyasında Minimalizm",
+                        content: "Kod yazarken karmaşadan kaçınmak ve her şeyi en sade haliyle tasarlamak hem performansı artırır hem de maintain etmeyi kolaylaştırır. Fonksiyonel tasarımlar her zaman kazanır.",
+                        image: "assets/images/resim1.png", 
+                        date: "20.05.2026"
+                    },
+                    {
+                        id: 222,
+                        title: "Işığı Yakalamak",
+                        content: "Fotoğrafçılıkta kompozisyon ve geometrik hatlar, sadece bir resmi değil o anın tüm hissini taşır. Doğru ışık, sıradan bir sokağı sanata dönüştürebilir.",
+                        image: null, 
+                        date: "18.05.2026"
+                    }
+                ];
+                localStorage.setItem('blogPosts', JSON.stringify(posts));
+            }
+
+            container.innerHTML = "";
+
+            posts.forEach(post => {
+                let imageHTML = "";
+                if (post.image) {
+                    imageHTML = `
+                        <div class="blog-img-wrapper mb-3">
+                            <img src="${post.image}" alt="${post.title}" onerror="this.parentElement.style.display='none'">
+                        </div>
+                    `;
+                }
+
+                const cardHTML = `
+                    <article class="blog-card p-4 shadow-sm" data-id="${post.id}">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <div>
+                                <h2 class="h4 fw-bold mb-1">${post.title}</h2>
+                                <span class="text-secondary small d-block mb-2">${post.date}</span>
+                            </div>
+                            
+                            <div class="dropdown">
+                                <button class="post-menu-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-three-dots-vertical"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end shadow border-secondary-subtle">
+                                    <li>
+                                        <a class="dropdown-item d-flex align-items-center gap-2" href="#" onclick="editPost(${post.id}); return false;">
+                                            <i class="bi bi-pencil small text-warning"></i> Düzenle
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item d-flex align-items-center gap-2 text-danger" href="#" onclick="deletePost(${post.id}); return false;">
+                                            <i class="bi bi-trash small"></i> Sil
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        ${imageHTML}
+                        <p class="text-body-secondary mb-0" style="white-space: pre-line; line-height: 1.7;">${post.content}</p>
+                    </article>
+                `;
+                container.innerHTML += cardHTML;
+            });
+        }
+
+        // Tema Yönetimi
+        function toggleTheme() {
+            const htmlTag = document.documentElement;
+            const themeIcon = document.getElementById('themeIcon');
+            if (htmlTag.getAttribute('data-bs-theme') === 'dark') {
+                htmlTag.setAttribute('data-bs-theme', 'light');
+                themeIcon.className = 'bi bi-moon-fill';
+            } else {
+                htmlTag.setAttribute('data-bs-theme', 'dark');
+                themeIcon.className = 'bi bi-sun-fill';
+            }
+        }
+    </script>
+</body>
+</html>

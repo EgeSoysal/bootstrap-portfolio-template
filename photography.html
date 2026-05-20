@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography | Ege Soysal</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Sol Menü / Sidebar Link Stilleri */
+        .year-sidebar .nav-link {
+            color: var(--bs-secondary-color);
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+        .year-sidebar .nav-link:hover {
+            color: var(--accent-color);
+            background-color: rgba(255, 107, 0, 0.05);
+        }
+        .year-sidebar .nav-link.active {
+            color: #ffffff !important;
+            background-color: var(--accent-color) !important;
+        }
+        [data-bs-theme="light"] .year-sidebar .nav-link.active {
+            color: #ffffff !important;
+        }
+
+        /* Fotoğraf Kartı ve Üzerine Gelince Çıkan Açıklama Katmanı */
+        .gallery-card {
+            position: relative;
+            background-color: transparent;
+            break-inside: avoid;
+            margin-bottom: 8px;
+            overflow: hidden;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        
+        .gallery-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.4s ease, filter 0.4s ease;
+        }
+
+        /* Karartma Overlay Katmanı */
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.75); /* Karartma oranı */
+            display: flex;
+            flex-column: column;
+            justify-content: flex-end;
+            padding: 12px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+        }
+
+        /* İmleç üzerine gelince tetiklenenler */
+        .gallery-card:hover img {
+            transform: scale(1.03);
+        }
+        .gallery-card:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* Yazıların Küçüklüğü ve Tipografisi */
+        .overlay-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .overlay-meta {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Filtreleme Geçiş Animasyonu */
+        .gallery-card.d-none {
+            display: none !important;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/images/logo.png" alt="Logo" width="40" height="40">
+                <span class="fw-bold tracking-wide">EGE SOYSAL</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-2">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="photography.html">Photography</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <button class="btn btn-outline-secondary theme-toggle-btn" id="themeToggle" onclick="toggleTheme()">
+                            <i class="bi bi-sun-fill" id="themeIcon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container-fluid px-4 my-5 flex-grow-1">
+        <div class="row">
+            
+            <div class="col-12 col-md-3 col-xl-2 mb-4">
+                <div class="position-sticky year-sidebar" style="top: 100px;">
+                    <h5 class="fw-bold mb-3 small text-uppercase tracking-wider" style="color: var(--accent-color);">Arşiv</h5>
+                    <ul class="nav flex-column gap-1" id="filterMenu">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" onclick="filterYear('all', this)">Tüm Resimler</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="filterYear('2026', this)">2026</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="filterYear('2025', this)">2025</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="filterYear('2024', this)">2024</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="filterYear('2023', this)">2023</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="filterYear('2022', this)">2022</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="filterYear('2021', this)">2021</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-9 col-xl-10">
+                
+                <div class="row mb-4 px-1">
+                    <div class="col-12">
+                        <h1 class="display-6 fw-bold mb-1" style="color: var(--accent-color);">Portraits & Spaces</h1>
+                        <p class="text-secondary small">Işığın, geometrinin ve zamanın vizörden geçen izleri.</p>
+                    </div>
+                </div>
+
+                <div class="photography-gallery" id="galleryWrapper">
+                    
+                    <div class="gallery-card" data-year="2026">
+                        <img src="assets/images/resim1.png" alt="Photo" onerror="this.src='https://picsum.photos/600/400?random=1'">
+                        <div class="gallery-overlay">
+                            <div class="overlay-title">Sokak Geometrisi</div>
+                            <div class="overlay-meta">2026 &bull; Adana, Türkiye</div>
+                        </div>
+                    </div>
+                    <div class="gallery-card" data-year="2026">
+                        <img src="assets/images/resim2.png" alt="Photo" onerror="this.src='https://picsum.photos/400/600?random=2'">
+                        <div class="gallery-overlay">
+                            <div class="overlay-title">Minimal Portre</div>
+                            <div class="overlay-meta">2026 &bull; Stüdyo</div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card" data-year="2025">
+                        <img src="assets/images/resim3.png" alt="Photo" onerror="this.src='https://picsum.photos/400/550?random=3'">
+                        <div class="gallery-overlay">
+                            <div class="overlay-title">Gölge Oyunu</div>
+                            <div class="overlay-meta">2025 &bull; Kahramanmaraş</div>
+                        </div>
+                    </div>
+                    <div class="gallery-card" data-year="2025">
+                        <img src="assets/images/resim4.png" alt="Photo" onerror="this.src='https://picsum.photos/600/350?random=4'">
+                        <div class="gallery-overlay">
+                            <div class="overlay-title">Endüstriyel Estetik</div>
+                            <div class="overlay-meta">2025 &bull; Fabrika Alanı</div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card" data-year="2024">
+                        <img src="assets/images/resim5.png" alt="Photo" onerror="this.src='https://picsum.photos/500/350?random=5'">
+                        <div class="gallery-overlay">
+                            <div class="overlay-title">Gece Işıkları</div>
+                            <div class="overlay-meta">2024 &bull; Şehir Merkezi</div>
+                        </div>
+                    </div>
+                    <div class="gallery-card" data-year="2024">
+                        <img src="assets/images/resim6.png" alt="Photo" onerror="this.src='https://picsum.photos/400/650?random=6'">
+                        <div class="gallery-overlay">
+                            <div class="overlay-title">Sessiz Sokak</div>
+                            <div class="overlay-meta">2024 &bull; Eski Kent</div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card" data-year="2023">
+                        <img src="assets/images/resim7.png" alt="Photo" onerror="this.src='https://picsum.photos/600/420?random=7'">
+                        <div class="gallery-overlay">
+                            <div class="overlay-title">Doğa ve Kontrast</div>
+                            <div class="overlay-meta">2023 &bull; Yayla</div>
+                        </div>
+                    </div>
+                    <div class="gallery-card" data-year="2023">
+                        <img src="assets/images/resim8.png" alt="Photo" onerror="this.src='https://picsum.photos/400/500?random=8'">
+                        <div class="gallery-overlay">
+                            <div class="overlay-title">Yansıma</div>
+                            <div class="overlay-meta">2023 &bull; Göl Kenarı</div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card" data-year="2022">
+                        <img src="assets/images/resim9.png" alt="Photo" onerror="this.src='https://picsum.photos/400/580?random=9'">
+                        <div class="gallery-overlay">
+                            <div class="overlay-title">Bakış Açısı</div>
+                            <div class="overlay-meta">2022 &bull; Mimari Yapı</div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-card" data-year="2021">
+                        <img src="assets/images/resim10.png" alt="Photo" onerror="this.src='https://picsum.photos/600/400?random=10'">
+                        <div class="gallery-overlay">
+                            <div class="overlay-title">İlk Kareler</div>
+                            <div class="overlay-meta">2021 &bull; Adana</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer class="bg-body-tertiary py-4 mt-auto">
+        <div class="container">
+            <div class="row align-items-center text-body-secondary small">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; 2026 Ege Soysal. All rights reserved. Built with Bootstrap 5.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-decoration-none text-body-secondary me-3">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none text-body-secondary me-3">Terms & Conditions</a>
+                    <a href="contact.html" class="text-decoration-none text-body-secondary">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+        // Yıllara Göre Filtreleme Scripti
+        function filterYear(year, element) {
+            // Linklerin aktiflik durumunu değiştir
+            const links = document.querySelectorAll('#filterMenu .nav-link');
+            links.forEach(link => link.classList.remove('active'));
+            element.classList.add('active');
+
+            // Kartları filtrele
+            const cards = document.querySelectorAll('#galleryWrapper .gallery-card');
+            cards.forEach(card => {
+                if (year === 'all' || card.getAttribute('data-year') === year) {
+                    card.classList.remove('d-none');
+                } else {
+                    card.classList.add('d-none');
+                }
+            });
+        }
+
+        // Tema Değiştirici
+        function toggleTheme() {
+            const htmlTag = document.documentElement;
+            const themeIcon = document.getElementById('themeIcon');
+            if (htmlTag.getAttribute('data-bs-theme') === 'dark') {
+                htmlTag.setAttribute('data-bs-theme', 'light');
+                themeIcon.className = 'bi bi-moon-fill';
+            } else {
+                htmlTag.setAttribute('data-bs-theme', 'dark');
+                themeIcon.className = 'bi bi-sun-fill';
+            }
+        }
+    </script>
+</body>
+</html>

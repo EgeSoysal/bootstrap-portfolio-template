@@ -1,0 +1,183 @@
+/* ==========================================================================
+   CUSTOM PORTFOLIO TEMPLATE STYLES (Bootstrap 5 Accent)
+   ========================================================================== */
+
+/* Renk Değişkenleri (Global Variables) */
+:root {
+    --accent-color: #ff6b00;       /* İmza rengimiz: Canlı Turuncu */
+    --accent-hover: #e05e00;       /* Koyu Turuncu (Hover durumları için) */
+    --transition-speed: 0.3s;      /* Akıcı geçiş animasyon hızı */
+}
+
+/* Genel Seçiciler & Yumuşak Kaydırma */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+/* Navbar Özelleştirmeleri */
+.navbar-brand img {
+    transition: transform var(--transition-speed) ease;
+}
+.navbar-brand honest:hover img {
+    transform: scale(1.05);
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color var(--transition-speed) ease;
+}
+
+/* Aktif sayfa linki ve hover durumunda turuncu parlaması */
+.nav-link:hover, 
+.nav-link.active {
+    color: var(--accent-color) !important;
+}
+
+/* Turuncu Buton Sınıfımız (Bootstrap Butonlarını Ezmeden Ekstra Güç) */
+.btn-accent {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border: none;
+    font-weight: 600;
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-accent:hover {
+    background-color: var(--accent-hover);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+}
+
+.btn-outline-accent {
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    background: transparent;
+    font-weight: 600;
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-outline-accent:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Hero Alanı (Giriş Ekranı) Tasarımı */
+.hero-section {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-img {
+    max-height: 450px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+}
+
+/* Fotoğraf Galerisi (Photography) İçin Masonry/Grid Temeli */
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform var(--transition-speed) ease;
+}
+
+.gallery-item img {
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+/* Footer Alt Çizgi Ayarı */
+footer {
+    border-top: 1px solid rgba(120, 120, 120, 0.15);
+}
+
+/* Tema Değiştirici Buton (Floating Toggle) Stili */
+.theme-toggle-btn {
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 50px;
+    transition: all var(--transition-speed) ease;
+}
+
+
+/*Galeri formatı*/
+
+/* ==========================================================================
+   NOAH KALINA STYLE COMPACT MASONRY GALLERY (8-sütun)
+   ========================================================================== */
+
+.photography-gallery {
+    /* Büyük ekranlarda 8 sütunlu kompakt düzen */
+    column-count: 8;
+    column-gap: 8px; /* İkonik sıkı görünüm için dar yatay boşluk */
+    width: 100%;
+}
+
+.gallery-card {
+    background-color: transparent;
+    break-inside: avoid; /* Sütun geçişlerinde resmin kesilmesini önler */
+    margin-bottom: 8px; /* Sıkı görünüm için dar dikey boşluk */
+    overflow: hidden;
+    border-radius: 2px; /* Tam referanstaki gibi keskin ve minimal kenarlar */
+    cursor: pointer;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: auto; /* Orijinal en-boy oranını milimetrik korur */
+    display: block;
+    object-fit: cover;
+    transition: filter var(--transition-speed) ease;
+}
+
+/* Hover Durumu: Resmi büyütmeden, sadece hafifçe aydınlatarak şık bir odaklanma sağlar */
+.gallery-card:hover img {
+    filter: brightness(1.2);
+}
+
+/* Farklı Ekran Genişliklerine Göre Sütun Sayısı Yönetimi (Responsive) */
+@media (max-width: 1600px) {
+    .photography-gallery {
+        column-count: 6;
+    }
+}
+
+@media (max-width: 1200px) {
+    .photography-gallery {
+        column-count: 5;
+    }
+}
+
+@media (max-width: 992px) {
+    .photography-gallery {
+        column-count: 4;
+    }
+}
+
+@media (max-width: 768px) {
+    .photography-gallery {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 480px) {
+    .photography-gallery {
+        column-count: 2; /* Mobilde bile şık durması için yan yana 2 kare */
+    }
+}
