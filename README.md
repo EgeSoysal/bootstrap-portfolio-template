@@ -40,5 +40,6 @@ bootstrap-portfolio-template/
 git add . 
 git commit -m "Initial commit"
 git push origin main
-git tag -m "tags"
-git push origin 
+git tag -a v1.0.0 -m "v1.0.0 sürümü" (Etiketi oluşturur - -m kullanırken -a eklemek daha sağlıklıdır)
+git push origin main
+git push origin v1.1.0

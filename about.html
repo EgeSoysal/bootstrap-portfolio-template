@@ -1,121 +1,299 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-bs-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me | Ege Soysal</title>
-    <link rel="icon" type="image/x-icon" href="assets/images/logo.ico">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <!-- Page-specific styles moved to assets/css/style.css -->
-</head>
-<body class="d-flex flex-column min-vh-100">
-
+  </head>
+  <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top py-3">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                <img src="assets/images/logo.png" alt="Logo" width="40" height="40">
-                <span class="fw-bold tracking-wide">EGE SOYSAL</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center gap-2">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="photography.html">Photography</a></li>
-                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item ms-lg-2">
-                        <button class="btn btn-outline-secondary theme-toggle-btn" id="themeToggle" onclick="toggleTheme()">
-                            <i class="bi bi-sun-fill" id="themeIcon"></i>
-                        </button>
-                    </li>
-                </ul>
-            </div>
+      <div class="container">
+        <a
+          class="navbar-brand d-flex align-items-center gap-2"
+          href="index.html"
+        >
+          <img src="assets/images/logo.png" alt="Logo" width="40" height="40" />
+          <span class="fw-bold tracking-wide">EGE SOYSAL</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center gap-2">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="skills.html">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="photography.html">Photography</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-2">
+              <button
+                class="btn btn-outline-secondary theme-toggle-btn"
+                id="themeToggle"
+                onclick="toggleTheme()"
+              >
+                <i class="bi bi-sun-fill" id="themeIcon"></i>
+              </button>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
-    <main class="container my-5 flex-grow-1 about-section" style="max-width: 900px;">
-        
-        <section class="mb-4">
-            <h2 class="text-uppercase mb-3" style="color: var(--accent-color);">HAKKIMDA</h2>
-            <p class="text-body-secondary">
-                Ben Ege Soysal. 2006 yılında Adana'da doğdum. Çocukluğumdan itibaren bilgisayarlar ve kameralar hayatımın doğal bir parçası oldu. Teknolojiyle kurduğum bu erken bağ, zamanla yalnızca tüketen değil, üreten biri olma isteğine dönüştü. Küçük yaşlardan itibaren kendi kendime öğrenmeye, denemeye ve ortaya somut işler koymaya çalıştım. Bu süreçte yazılım, teknoloji ve dijital üretim alanlarında kendimi geliştirmeye odaklandım. Farklı disiplinlerde projeler üretmeye çalıştım; bazıları tamamlandı, bazıları ise bana deneyim kazandırdı. Bugün geldiğim noktada, üretmenin ve öğrenmenin birbirinden ayrılmaz olduğuna inanıyorum. Bu yüzden odağım hâlâ gelişmek, daha iyisini yapmak ve sınırlarımı zorlamak. Şu anda Bilgisayar Programcılığı ön lisans programında eğitim alıyorum. Akademik eğitimimi, bireysel çalışmalarla desteklemeye özen gösteriyorum. Öğrendiğim yazılım dilleriyle küçük ölçekli konsol projeleri geliştiriyor, bu projeleri GitHub üzerinden paylaşarak hem kendimi disipline ediyor hem de ilerlememi kayıt altına alıyorum. Bunun yanı sıra makine öğrenimi, veri bilimi ve büyük dil modelleri (LLM) üzerine bağımsız araştırmalar yapıyorum. Bu alanlarda yalnızca yüzeysel bilgilerle yetinmek yerine, mantığını anlamaya ve gerçek kullanım senaryoları üzerinden düşünmeye çalışıyorum. Yapay zekânın yalnızca bir trend değil, uzun vadeli bir dönüşüm olduğuna inanıyor ve bu dönüşümün parçası olmayı hedefliyorum. Vaktimin büyük kısmını çalışarak, öğrenerek ve üreterek geçiriyorum. Kısa vadeli sonuçlardan çok, uzun vadede sağlam bir temel oluşturmayı önemsiyorum. Amacım; teknoloji, yazılım ve yapay zekâ alanlarında derinleşerek, değer üreten projeler geliştirmek ve bu projeleri sürdürülebilir hâle getirmek.
-            </p>
-        </section>
+    <main
+      class="container my-5 flex-grow-1 about-section"
+      style="max-width: 900px"
+    >
+      <section class="mb-4">
+        <h2 class="text-uppercase mb-3" style="color: var(--accent-color)">
+          ABOUT ME
+        </h2>
+        <p class="text-body-secondary">
+          I'm Ege Soysal. Since my childhood, computers and cameras have been a
+          natural part of my life. This early connection with technology evolved
+          over time into a desire to become a creator, rather than just a
+          consumer. From a young age, I strived to be self-taught, to
+          experiment, and to produce tangible work. During this process, I
+          focused on developing myself in the fields of software, technology,
+          and digital production. I worked on projects across different
+          disciplines; some were completed, while others provided me with
+          valuable experience. At this point in my journey, I believe that
+          producing and learning are inseparable. Therefore, my focus remains on
+          evolving, doing better, and pushing my boundaries. Currently, I am
+          pursuing an associate degree in Computer Programming. I make a
+          conscious effort to support my academic education with independent
+          studies. I develop small-scale console projects with the programming
+          languages I learn, sharing them on GitHub to both discipline myself
+          and document my progress. In addition, I conduct independent research
+          on machine learning, data science, and large language models (LLMs).
+          Instead of settling for superficial knowledge in these fields, I
+          strive to understand their underlying logic and think through
+          real-world use cases. I believe that artificial intelligence is not
+          just a trend, but a long-term transformation, and I aim to be a part
+          of it. I spend most of my time studying, learning, and producing. I
+          prioritize building a rock-solid foundation for the long run over
+          short-term results. My goal is to deepen my expertise in technology,
+          software, and AI to develop value-driven projects and make them
+          sustainable.
+        </p>
+      </section>
 
-        <div class="about-divider"></div>
+      <div class="about-divider"></div>
 
-        <section class="mb-4">
-            <h2 class="text-uppercase mb-3" style="color: var(--accent-color);">VİZYON</h2>
-            <p class="text-body-secondary">
-                Lise yıllarım boyunca yalnızca teknik alanlara değil; felsefeye, farklı halklara, kültürlere ve düşünce sistemlerine de yoğun ilgi duydum. Aynı dönemde astronomi üzerine araştırmalar yaparak evrenin yapısı, zaman kavramı ve insanın bu büyük sistem içindeki yeri üzerine düşünme fırsatı buldum. Gerek felsefe gerekse astronomi, bana insanın ne kadar küçük ama aynı zamanda ne kadar büyük bir potansiyele sahip olduğunu gösteri. Farklı kültürleri, inanç sistemlerini ve yaşam biçimlerini incelemek; astronomiyle birlikte evrene daha geniş bir perspektiften bakmamı sağladı. Bu süreçte, tek bir doğruya ya da tek bir bakış açısına saplanmanın insanı sınırlandırdığını fark ettim. Hayatın anlamının, şartlar ne olursa olsun insanın kendi potansiyelinin zirvesini görmeye çalışması ve bu potansiyeli hayata geçirmesi olduğuna inanmaya başladım. Benim için bu anlayış; yalnızca tek bir alanda ilerlemek değil, birçok alanda gelişmek, öğrendiklerimi bir araya getirerek somut ürünler ortaya koymak anlamına geliyor. Bilginin ancak üretime dönüştüğünde değer kazandığını, üretimin ise paylaşıldıkça çoğaldığını düşünüyorum. Bu nedenle geliştirdiğim projelerin, ortaya koyduğum fikirlerin ve yaptığım çalışmaların yalnızca bana değil, başkalarına da katkı sağlamasını önemsiyorum. Vizyonum; teknoloji, yazılım ve yapay zekâ başta olmak üzere ilgilendiğim alanlarda derinleşirken, bu bilgileri daha geniş bir düşünsel çerçeveyle birleştirmektir. Evreni anlamaya çalışmanın verdiği merakla, insanı ve toplumu anlamaya yönelik felsefi bakışı, teknik üretimle buluşturmayı hedefliyorum. Böylece yalnızca çalışan sistemler değil, anlamı olan işler ortaya koymak istiyorum. Hayatıma dair aldığım kararlar, hedeflerim ve genel bakış açım bu anlayış üzerine kurulu. Kısa vadeli başarılar yerine, uzun vadede sürdürülebilir bir gelişim ve sürekli öğrenme kültürü inşa etmeyi önemsiyorum. Bu yolculukta yeni fikirlere, farklı düşüncelere ve benden farklı insanlara her zaman ihtiyaç duyacağımın farkındayım. Çünkü gerçek gelişimin; merak etmekten, sorgulamaktan ve paylaşımdan geçtiğine inanıyorum. Vizyonum, potansiyelimin sınırlarını zorlayan, öğrenmeye açık ve sürekli üreten bir yaşam inşa etmek üzerine kurulu.
-            </p>
-        </section>
+      <section class="mb-4">
+        <h2 class="text-uppercase mb-3" style="color: var(--accent-color)">
+          VISION
+        </h2>
+        <p class="text-body-secondary">
+          During my high school years, I developed a deep interest not only in
+          technical fields, but also in philosophy, different cultures, peoples,
+          and thought systems. During the same period, I conducted research on
+          astronomy, reflecting on the structure of the universe, the concept of
+          time, and human existence within this vast system. Both philosophy and
+          astronomy showed me how small human beings are, yet what immense
+          potential they possess. Studying diverse cultures, belief systems, and
+          lifestyles, combined with my interest in astronomy, allowed me to view
+          the universe from a broader perspective. Throughout this process, I
+          realized that clinging to a single truth or viewpoint limits a person.
+          I came to believe that the meaning of life is to strive to realize the
+          absolute peak of one's potential, regardless of the circumstances. For
+          me, this philosophy means evolving across multiple disciplines rather
+          than advancing in just one, and bringing my diverse knowledge together
+          to create tangible products. I believe knowledge only gains value when
+          converted into production, and production multiplies only when shared.
+          Therefore, I highly value ensuring that the projects I develop, the
+          ideas I put forward, and the work I do contribute not only to me but
+          to others as well. My vision is to deepen my expertise in my fields of
+          interest especially technology, software, and artificial
+          intelligence—while merging this knowledge with a broader intellectual
+          framework. Driven by the curiosity of trying to understand the
+          universe, I aim to connect the philosophical perspective of
+          understanding humanity and society with technical production. By doing
+          so, I want to build works that are not just functional systems, but
+          meaningful creations. The decisions I make, my goals, and my overall
+          outlook on life are built upon this foundation. I prioritize
+          constructing a sustainable, long-term culture of growth and continuous
+          learning over short-term achievements. I am fully aware that I will
+          always need new ideas, different perspectives, and diverse people
+          along this path. Because I believe true growth stems from curiosity,
+          questioning, and sharing. My ultimate vision is built upon creating a
+          life that continuously produces, stays open to learning, and pushes
+          the very boundaries of my potential.
+        </p>
+      </section>
 
-        <div class="about-divider"></div>
+      <div class="about-divider"></div>
 
-        <section class="mb-4">
-            <h2 class="text-uppercase mb-3" style="color: var(--accent-color);">SANAT</h2>
-            <p class="text-body-secondary">
-                Benim için sanat, yalnızca estetik üretmek ya da bir şeyleri "güzel" göstermek değildir. Sanat; düşünceyi, bilgiyi ve üretimi bir araya getirerek anlamlı bir bütün hâline getirme biçimidir. Ürettiğim her şeyin, hangi alandan çıkarsa çıksın, sanatla bir bağ kurmasını bu yüzden önemsiyorum. Yazılım, teknoloji, yapay zekâ ya da veri; benim için başlı başına bir anlatım araçlarıdır. Üretim sürecimde teknik yeterlilik kadar, o üretimin ne anlattığı ve ne hissettirdiği de belirleyicidir. Ortaya çıkan işin yalnızca çalışıyor olması değil, bir düşünceyi taşıması, bir soru sorması ve izleyen ya da kullanan kişide bir iz bırakması gerektiğine inanıyorum. Bu yüzden ürettiklerimi, salt fonksiyonel ürünler olarak değil; anlatısı olan, bağlamı olan ve yorumlanabilir işler olarak konumlandırıyorum. Sanatı, hayatın geri kalanından ayrı bir alan olarak görmüyorum. Aksine, yaptığım her çalışmanın sanatla temas etmesini bilinçli bir tercih olarak benimsiyorum. Teknolojiyle sanat arasındaki sınırların giderek silikleştiği bir çağda, bu iki alanı birbirinden koparmak yerine, iç içe geçirmenin daha anlamlı ve daha güçlü sonuçlar doğurduğunu düşünüyorum. Benim üretim anlayışımda sanat; deneysel, sorgulayıcı ve açık uçludur. Net cevaplar vermekten çok, doğru soruları sormayı önemser. Bu yaklaşım, beni farklı disiplinlerden beslenmeye, alışılmış kalıpların dışına çıkmaya ve yeni anlatım biçimleri aramaya yönlendiriyor. Her proje, hem teknik hem de sanatsal açıdan bir keşif alanı olarak ele alınıyor. Ne Üretirsem Üreteyim, sanatla kurduğum bu bağın korunmasını temel bir ilke olarak görüyorum. Çünkü benim için gerçek değer, yalnızca bir şey ortaya koymakta değil; o şeyin anlam, duygu ve düşünceyle harmanlanabilmektedir. Sanat, tüm üretimlerimin ortak dili ve değişmeyen referans noktasıdır.
-            </p>
-        </section>
+      <section class="mb-4">
+        <h2 class="text-uppercase mb-3" style="color: var(--accent-color)">
+          ART
+        </h2>
+        <p class="text-body-secondary">
+          For me, art is not merely about producing aesthetics or making things
+          look 'beautiful.' Art is a way of bringing thought, knowledge, and
+          production together to form a meaningful whole. This is why I ensure
+          that everything I create, regardless of the field it originates from,
+          establishes a connection with art. Software, technology, artificial
+          intelligence, or data are, in themselves, mediums of expression for
+          me. In my production process, what that creation conveys and evokes is
+          just as decisive as technical proficiency. I believe that a finished
+          work should not just function; it must carry a thought, ask a
+          question, and leave an impression on the viewer or user. Therefore, I
+          position my creations not as purely functional products, but as works
+          that possess a narrative, a context, and room for interpretation. I do
+          not view art as a domain separate from the rest of life. On the
+          contrary, I consciously choose to let every work I do touch upon art.
+          In an era where the boundaries between technology and art are
+          increasingly blurred, I believe that intertwining these two fields,
+          rather than tearing them apart, yields more meaningful and powerful
+          results. In my understanding of production, art is experimental,
+          inquisitive, and open ended. It values asking the right questions over
+          providing neat answers. This approach drives me to draw inspiration
+          from different disciplines, step outside conventional boundaries, and
+          seek new forms of expression. Every project is approached as a space
+          for exploration, both technically and artistically. No matter what I
+          produce, I consider preserving this bond with art as a core principle.
+          Because for me, true value lies not just in creating something, but in
+          blending that creation with meaning, emotion, and thought. Art is the
+          common language and the unchanging reference point of all my
+          productions.
+        </p>
+      </section>
 
-        <div class="about-divider"></div>
+      <div class="about-divider"></div>
 
-        <section class="mb-4">
-            <h2 class="text-uppercase mb-3" style="color: var(--accent-color);">GELECEK</h2>
-            <p class="text-body-secondary">
-                After completing high school, I took a gap year to prepare for the university entrance exam. Due to a severe migraine attack during the most critical moment of the exam, I was unable to replicate the high rankings I consistently achieved in the nationwide practice exams, which led me to enroll in an associate degree program. However, I view this phase not as a setback, but as an opportunity to build an even stronger academic foundation.
-My long-term goal is to complete my bachelor's degree in Artificial Intelligence and Machine Learning in Turkey, and subsequently pursue a master's degree in this field in the United States. I aim to immerse myself in an academic and productive environment that reflects my true potential, allowing me to focus deeply on my primary objectives. Currently, my immediate priorities are expanding my portfolio on GitHub, continuing my research in AI and machine learning, and integrating this technical output with photography to develop a versatile, multifaceted approach to creative production.
-            </p>
-        </section>
-
+      <section class="mb-4">
+        <h2 class="text-uppercase mb-3" style="color: var(--accent-color)">
+          FUTURE
+        </h2>
+        <p class="text-body-secondary">
+          After completing high school, I took a gap year to prepare for the
+          university entrance exam. Due to a severe migraine attack during the
+          most critical moment of the exam, I was unable to replicate the high
+          rankings I consistently achieved in the nationwide practice exams,
+          which led me to enroll in an associate degree program. However, I view
+          this phase not as a setback, but as an opportunity to build an even
+          stronger academic foundation. My long-term goal is to complete my
+          bachelor's degree in Artificial Intelligence and Machine Learning in
+          Turkey, and subsequently pursue a master's degree in this field in the
+          United States. I aim to immerse myself in an academic and productive
+          environment that reflects my true potential, allowing me to focus
+          deeply on my primary objectives. Currently, my immediate priorities
+          are expanding my portfolio on GitHub, continuing my research in AI and
+          machine learning, and integrating this technical output with
+          photography to develop a versatile, multifaceted approach to creative
+          production.
+        </p>
+      </section>
     </main>
     <footer class="bg-body-tertiary py-4 mt-auto">
-        <div class="container">
-            <div class="row align-items-center text-body-secondary small mb-3">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; 2026 Ege Soysal. All rights reserved. Built with Bootstrap 5.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <a href="#" class="text-decoration-none text-body-secondary me-3">Privacy Policy</a>
-                    <a href="#" class="text-decoration-none text-body-secondary me-3">Terms & Conditions</a>
-                    <a href="contact.html" class="text-decoration-none text-body-secondary">Contact</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 text-center">
-                    <div class="d-flex justify-content-center gap-4 fs-4">
-                        <a href="https://x.com/EgeeSoysal" class="text-body-secondary" title="Twitter"><i class="bi bi-twitter-x"></i></a>
-                        <a href="https://www.linkedin.com/in/soysalege" class="text-body-secondary" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://github.com/EgeSoysal" class="text-body-secondary" title="GitHub"><i class="bi bi-github"></i></a>
-                        <a href="https://instagram.com/egesoysals" class="text-body-secondary" title="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="https://discord.gg/szfgv8pNxR" class="text-body-secondary" title="Discord"><i class="bi bi-discord"></i></a>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row align-items-center text-body-secondary small mb-3">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            &copy; 2026 Ege Soysal. All rights reserved. Built with Bootstrap 5.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="#" class="text-decoration-none text-body-secondary me-3"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-decoration-none text-body-secondary me-3"
+              >Terms & Conditions</a
+            >
+            <a
+              href="contact.html"
+              class="text-decoration-none text-body-secondary"
+              >Contact</a
+            >
+          </div>
         </div>
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="d-flex justify-content-center gap-4 fs-4">
+              <a
+                href="https://x.com/EgeeSoysal"
+                class="text-body-secondary"
+                title="Twitter"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/soysalege"
+                class="text-body-secondary"
+                title="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a
+                href="https://github.com/EgeSoysal"
+                class="text-body-secondary"
+                title="GitHub"
+                ><i class="bi bi-github"></i
+              ></a>
+              <a
+                href="https://instagram.com/egesoysals"
+                class="text-body-secondary"
+                title="Instagram"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="https://discord.gg/szfgv8pNxR"
+                class="text-body-secondary"
+                title="Discord"
+                ><i class="bi bi-discord"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <script>
-        function toggleTheme() {
-            const htmlTag = document.documentElement;
-            const themeIcon = document.getElementById('themeIcon');
-            if (htmlTag.getAttribute('data-bs-theme') === 'dark') {
-                htmlTag.setAttribute('data-bs-theme', 'light');
-                themeIcon.className = 'bi bi-moon-fill';
-            } else {
-                htmlTag.setAttribute('data-bs-theme', 'dark');
-                themeIcon.className = 'bi bi-sun-fill';
-            }
+      function toggleTheme() {
+        const htmlTag = document.documentElement;
+        const themeIcon = document.getElementById("themeIcon");
+        if (htmlTag.getAttribute("data-bs-theme") === "dark") {
+          htmlTag.setAttribute("data-bs-theme", "light");
+          themeIcon.className = "bi bi-moon-fill";
+        } else {
+          htmlTag.setAttribute("data-bs-theme", "dark");
+          themeIcon.className = "bi bi-sun-fill";
         }
+      }
     </script>
-</body>
+  </body>
 </html>
