@@ -41,8 +41,8 @@ git status
 git add . 
 git commit -m "Initial commit"
 git push 
-git tag v1.3.0
-git push origin v1.3.0
+git tag v1.3.1
+git push origin v1.3.1
 git push --tags
 
 v1 --> Ana Sürüm 
