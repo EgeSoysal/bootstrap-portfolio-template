@@ -37,9 +37,15 @@ bootstrap-portfolio-template/
 ├── blog.html                    # Technical & Creative Blog Layouts
 └── contact.html                 # Contact Form & Categorized Social Network Anchors
 
+git status
 git add . 
 git commit -m "Initial commit"
-git push origin main
-git tag -a v1.0.0 -m "v1.0.0 sürümü" (Etiketi oluşturur - -m kullanırken -a eklemek daha sağlıklıdır)
-git push origin main
-git push origin v1.1.0
+git push 
+git tag v1.3.0
+git push origin v1.3.0
+git push --tags
+
+v1 --> Ana Sürüm 
+.0 --> Minör: Yeni özellikler gelince örn: darkmode - AI future
+.0 --> patch: Bug fix - css düzeltmesi - performans fix - 
+v1.0.0
