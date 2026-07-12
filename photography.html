@@ -23,7 +23,7 @@
                 <img src="assets/images/logo.png" alt="Logo" width="40" height="40">
                 <span class="fw-bold tracking-wide">SOYSAL.DEV</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation" title="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -36,7 +36,7 @@
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item ms-lg-2">
-                        <button class="btn btn-outline-secondary theme-toggle-btn" id="themeToggle" onclick="toggleTheme()">
+                        <button class="btn btn-outline-secondary theme-toggle-btn" id="themeToggle" onclick="toggleTheme()" type="button" aria-label="Toggle color theme" title="Toggle color theme">
                             <i class="bi bi-sun-fill" id="themeIcon"></i>
                         </button>
                     </li>
@@ -51,8 +51,8 @@
         <div class="row">
             
             <div class="col-12 col-md-3 col-xl-2 mb-4">
-                <div class="position-sticky year-sidebar" style="top: 100px;">
-                    <h5 class="fw-bold mb-3 small text-uppercase tracking-wider" style="color: var(--accent-color);">Archive</h5>
+                <div class="position-sticky year-sidebar photography-sidebar">
+                    <h5 class="fw-bold mb-3 small text-uppercase tracking-wider archive-heading">Archive</h5>
                     <ul class="nav flex-column gap-1" id="filterMenu">
                         <li class="nav-item">
                             <a class="nav-link active" href="#" onclick="filterYear('all', this)">All Photos</a> <!-- Tüm fotoğraflar etiketi -->
@@ -94,7 +94,7 @@
                 
                 <div class="row mb-4 px-1">
                     <div class="col-12">
-                        <h1 class="display-6 fw-bold mb-1" style="color: var(--accent-color);">Portraits & Spaces</h1>
+                        <h1 class="display-6 fw-bold mb-1 accent-heading">Portraits & Spaces</h1>
                         <p class="text-secondary small">The traces of light, geometry, and time passing through the viewfinder.</p>
                     </div>
                 </div>

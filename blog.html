@@ -24,7 +24,7 @@
                 <img src="assets/images/logo.png" alt="Logo" width="40" height="40">
                 <span class="fw-bold tracking-wide">SOYSAL.DEV</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation" title="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -37,7 +37,7 @@
                     <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item ms-lg-2">
-                        <button class="btn btn-outline-secondary theme-toggle-btn" id="themeToggle" onclick="toggleTheme()">
+                        <button class="btn btn-outline-secondary theme-toggle-btn" id="themeToggle" onclick="toggleTheme()" type="button" aria-label="Toggle color theme" title="Toggle color theme">
                             <i class="bi bi-sun-fill" id="themeIcon"></i>
                         </button>
                     </li>
@@ -45,16 +45,16 @@
             </div>
         </div>
     </nav>
-    <main class="container my-5 flex-grow-1" style="max-width: 800px;">
+    <main class="container my-5 flex-grow-1 blog-page">
         
         <div class="d-flex justify-content-between align-items-center mb-5">
             <div>
-                <h1 class="display-5 fw-bold" style="color: var(--accent-color);">Blog</h1>
+                <h1 class="display-5 fw-bold accent-heading">Blog</h1>
                 <p class="text-secondary mb-0">Thoughts, notes, and technical writings.</p>
             </div>
 
             <!--"Yeni Bir Gönderi Ekle" işlemini başlatan bir yüzen aksiyon butonu (FAB - Floating Action Button). -->
-            <button class="add-post-btn shadow" onclick="openCreateModal()" title="Add New Post">
+            <button class="add-post-btn shadow" onclick="openCreateModal()" type="button" title="Add New Post" aria-label="Add new post">
                 <i class="bi bi-plus-lg fs-4"></i>
             </button>
         </div>
@@ -100,7 +100,7 @@
                         <!-- İşlem butonları: Cancel -> modal kapatılır, Save -> form gönderilir -->
                         <div class="text-end mt-4">
                             <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-warning text-white fw-bold" style="background-color: var(--accent-color); border:none;">Save</button>
+                            <button type="submit" class="btn btn-warning text-white fw-bold blog-save-btn">Save</button>
                         </div>
                     </form>
                 </div>

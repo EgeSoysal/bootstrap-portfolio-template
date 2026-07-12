@@ -24,7 +24,7 @@
                 <img src="assets/images/logo.png" alt="Logo" width="40" height="40">
                 <span class="fw-bold tracking-wide">SOYSAL.DEV</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation" title="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -37,7 +37,7 @@
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
                     <li class="nav-item ms-lg-2">
-                        <button class="btn btn-outline-secondary theme-toggle-btn" id="themeToggle" onclick="toggleTheme()">
+                        <button class="btn btn-outline-secondary theme-toggle-btn" id="themeToggle" onclick="toggleTheme()" type="button" aria-label="Toggle color theme" title="Toggle color theme">
                             <i class="bi bi-sun-fill" id="themeIcon"></i>
                         </button>
                     </li>
@@ -47,7 +47,7 @@
     </nav>
     <main class="container my-5 flex-grow-1">
         <div class="mb-5 text-center text-md-start">
-            <h1 class="display-5 fw-bold" style="color: var(--accent-color);">Contact Me</h1>
+            <h1 class="display-5 fw-bold accent-heading">Contact Me</h1>
             <p class="text-secondary">Do you have a project idea or just want to say hello? Fill out the form and reach out to me.</p>
         </div>
 
@@ -70,7 +70,7 @@
 
 
                     <!--GitHub-->
-                    <a href="https://github.com/EgeSoysal" target="_blank" class="text-decoration-none contact-link-row d-flex align-items-center gap-3">
+                    <a href="https://github.com/EgeSoysal" target="_blank" rel="noopener noreferrer" class="text-decoration-none contact-link-row d-flex align-items-center gap-3">
                         <div class="contact-icon-box shadow-sm">
                             <i class="bi bi-github"></i>
                         </div>
@@ -82,7 +82,7 @@
 
 
                     <!--LinkedIn-->
-                    <a href="https://www.linkedin.com/in/soysalege/" target="_blank" class="text-decoration-none contact-link-row d-flex align-items-center gap-3">
+                    <a href="https://www.linkedin.com/in/soysalege/" target="_blank" rel="noopener noreferrer" class="text-decoration-none contact-link-row d-flex align-items-center gap-3">
                         <div class="contact-icon-box shadow-sm">
                             <i class="bi bi-linkedin"></i>
                         </div>
@@ -94,7 +94,7 @@
 
 
                     <!--X / Twitter-->
-                    <a href="https://x.com/EgeeSoysal" target="_blank" class="text-decoration-none contact-link-row d-flex align-items-center gap-3">
+                    <a href="https://x.com/EgeeSoysal" target="_blank" rel="noopener noreferrer" class="text-decoration-none contact-link-row d-flex align-items-center gap-3">
                         <div class="contact-icon-box shadow-sm">
                             <i class="bi bi-twitter-x"></i>
                         </div>
@@ -106,7 +106,7 @@
 
 
                     <!--Instagram-->
-                    <a href="https://instagram.com/egesoysals" target="_blank" class="text-decoration-none contact-link-row d-flex align-items-center gap-3">
+                    <a href="https://instagram.com/egesoysals" target="_blank" rel="noopener noreferrer" class="text-decoration-none contact-link-row d-flex align-items-center gap-3">
                         <div class="contact-icon-box shadow-sm">
                             <i class="bi bi-instagram"></i>
                         </div>
@@ -118,7 +118,7 @@
 
 
                     <!--Medium-->
-                    <a href="https://egesoysal.medium.com/" target="_blank" class="text-decoration-none contact-link-row d-flex align-items-center gap-3">
+                    <a href="https://egesoysal.medium.com/" target="_blank" rel="noopener noreferrer" class="text-decoration-none contact-link-row d-flex align-items-center gap-3">
                         <div class="contact-icon-box shadow-sm">
                             <i class="bi bi-medium"></i>
                         </div>
@@ -130,7 +130,7 @@
 
 
                     <!--Stack Overflow-->
-                    <a href="https://stackoverflow.com/users/32527093/ege-soysal" target="_blank" class="text-decoration-none contact-link-row d-flex align-items-center gap-3">
+                    <a href="https://stackoverflow.com/users/32527093/ege-soysal" target="_blank" rel="noopener noreferrer" class="text-decoration-none contact-link-row d-flex align-items-center gap-3">
                         <div class="contact-icon-box shadow-sm">
                             <i class="bi bi-stack-overflow"></i>
                         </div>
@@ -142,7 +142,7 @@
 
 
                     <!--Discord-->
-                    <a href="https://discord.gg/szfgv8pNxR" target="_blank" class="text-decoration-none contact-link-row d-flex align-items-center gap-3">
+                    <a href="https://discord.gg/szfgv8pNxR" target="_blank" rel="noopener noreferrer" class="text-decoration-none contact-link-row d-flex align-items-center gap-3">
                         <div class="contact-icon-box shadow-sm">
                             <i class="bi bi-discord"></i>
                         </div>
@@ -192,7 +192,7 @@
                             <textarea class="form-control" id="messageText" rows="5" required placeholder="Enter your message here..."></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-warning text-white fw-bold w-100 py-2.5" style="background-color: var(--accent-color); border: none;">
+                        <button type="submit" class="btn btn-warning text-white fw-bold w-100 py-2.5 contact-submit-btn">
                             <i class="bi bi-send-fill me-2"></i> Send Message
                         </button>
 

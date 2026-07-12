@@ -23,7 +23,7 @@
                 <img src="assets/images/logo.png" alt="Logo" width="40" height="40">
                 <span class="fw-bold tracking-wide">SOYSAL.DEV</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation" title="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -36,7 +36,7 @@
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item ms-lg-2">
-                        <button class="btn btn-outline-secondary theme-toggle-btn" id="themeToggle" onclick="toggleTheme()">
+                        <button class="btn btn-outline-secondary theme-toggle-btn" id="themeToggle" onclick="toggleTheme()" type="button" aria-label="Toggle color theme" title="Toggle color theme">
                             <i class="bi bi-sun-fill" id="themeIcon"></i>
                         </button>
                     </li>
@@ -44,17 +44,17 @@
             </div>
         </div>
     </nav>
-    <main class="container my-5 flex-grow-1" style="max-width: 1000px;">
+    <main class="container my-5 flex-grow-1 skills-page">
         
         <div class="row mb-5 text-center text-lg-start">
             <div class="col-12">
-                <h1 class="display-5 fw-bold" style="color: var(--accent-color);">Skills</h1>
+                <h1 class="display-5 fw-bold accent-heading">Skills</h1>
                 <p class="text-secondary mb-0">Software architectures, languages I use, tools, and my official qualifications.</p>
             </div>
         </div>
 
         <section class="mb-5">
-            <h3 class="h5 text-uppercase fw-bold mb-4 tracking-wide" style="color: var(--accent-color);">
+            <h3 class="h5 text-uppercase fw-bold mb-4 tracking-wide section-heading">
                 <i class="bi bi-code-slash me-2"></i> Languages & Frameworks
             </h3>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -108,7 +108,7 @@
         </section>
 
         <section class="mb-5">
-            <h3 class="h5 text-uppercase fw-bold mb-4 tracking-wide" style="color: var(--accent-color);">
+            <h3 class="h5 text-uppercase fw-bold mb-4 tracking-wide section-heading">
                 <i class="bi bi-database-fill me-2"></i> Database & Cloud
             </h3>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -129,7 +129,7 @@
 
 
         <section class="mb-5">
-            <h3 class="h5 text-uppercase fw-bold mb-4 tracking-wide" style="color: var(--accent-color);">
+            <h3 class="h5 text-uppercase fw-bold mb-4 tracking-wide section-heading">
                 <i class="bi bi-layers-half me-2"></i> Tools & Production
             </h3>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -153,7 +153,7 @@
 
         <section class="mb-5">
             <div class="text-center text-lg-start mb-4">
-                <h3 class="h5 text-uppercase fw-bold mb-1 tracking-wide" style="color: var(--accent-color);">
+                <h3 class="h5 text-uppercase fw-bold mb-1 tracking-wide section-heading">
                     <i class="bi bi-patch-check-fill me-2"></i> Certificates & Credentials
                 </h3>
                 <p class="text-secondary small">Official education, certificates of achievement, and certificates of participation (You can click on the images to enlarge them).</p>
@@ -241,7 +241,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center p-2">
-                    <img id="certModalImg" src="" alt="Certificate Full Size" class="img-fluid rounded shadow" style="max-height: 75vh; width: auto;" onerror="this.onerror=null; this.src='assets/images/resim.png';">
+                    <img id="certModalImg" src="" alt="Certificate Full Size" class="img-fluid rounded shadow cert-modal-image" onerror="this.onerror=null; this.src='assets/images/resim.png';">
                 </div>
             </div>
         </div>

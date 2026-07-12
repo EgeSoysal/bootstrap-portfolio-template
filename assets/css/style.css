@@ -115,6 +115,22 @@ footer {
     transition: all var(--transition-speed) ease;
 }
 
+.hero-badge {
+    background-color: var(--accent-color) !important;
+}
+
+.hero-name-accent,
+.summary-heading,
+.summary-link,
+.feature-icon {
+    color: var(--accent-color);
+}
+
+.summary-text {
+    text-align: justify;
+    line-height: 1.7;
+}
+
 .accent-heading {
     color: var(--accent-color);
 }
@@ -125,6 +141,34 @@ footer {
 
 .about-section {
     max-width: 900px;
+}
+
+.blog-page {
+    max-width: 800px;
+}
+
+.blog-save-btn,
+.contact-submit-btn {
+    background-color: var(--accent-color);
+    border: none;
+}
+
+.photography-sidebar {
+    top: 100px;
+}
+
+.archive-heading,
+.section-heading {
+    color: var(--accent-color);
+}
+
+.skills-page {
+    max-width: 1000px;
+}
+
+.cert-modal-image {
+    max-height: 75vh;
+    width: auto;
 }
 
 
