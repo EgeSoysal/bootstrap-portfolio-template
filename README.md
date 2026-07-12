@@ -10,7 +10,7 @@ A modern, clean, and fully responsive portfolio template built with Bootstrap 5.
 
 ## ✨ Main Features
 
-- 🌙 Dark / light mode toggle with a smooth visual switch
+- 🌓 Dark / light mode toggle with a smooth visual switch
 - 📱 Fully responsive layout for desktop, tablet, and mobile screens
 - 🧠 Clean sections for profile, skills, projects, and contact information
 - 📷 Photography gallery layout with a simple archive-style presentation
@@ -53,3 +53,16 @@ bootstrap-portfolio-template/
 ## ✍️ Notes
 
 This project is intended as a reusable template rather than a CMS. The blog page is currently static and easy to customize for future content updates.
+
+git status 
+git add .
+git commit -m "refactor: convert personal portfolio into reusable bootstrap template"
+git push
+git tag v3.6.7
+git push origin v3.6.7
+git push --tags
+
+v1 --> Ana Sürüm
+.0 --> Minör: Yeni özellikler gelince örn: darkmode - AI future
+.0 --> patch: Bug fix - css düzeltmesi - performans fix -
+v1.0.0
