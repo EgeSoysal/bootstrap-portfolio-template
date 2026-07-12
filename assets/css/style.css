@@ -23,7 +23,7 @@ body {
 .navbar-brand img {
     transition: transform var(--transition-speed) ease;
 }
-.navbar-brand honest:hover img {
+.navbar-brand:hover img {
     transform: scale(1.05);
 }
 
@@ -113,6 +113,18 @@ footer {
     padding: 8px 12px;
     border-radius: 50px;
     transition: all var(--transition-speed) ease;
+}
+
+.accent-heading {
+    color: var(--accent-color);
+}
+
+.projects-page {
+    max-width: 950px;
+}
+
+.about-section {
+    max-width: 900px;
 }
 
 
@@ -516,7 +528,7 @@ footer {
 }
 
 
-/* ========================================================================== */
+/* ===========================================================================*/
 /* blog.html — extracted embedded styles (originally inside <style> in blog.html) */
 /* ========================================================================== */
 .blog-card {

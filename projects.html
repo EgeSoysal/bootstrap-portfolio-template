@@ -44,6 +44,7 @@
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -75,6 +76,7 @@
                 class="btn btn-outline-secondary theme-toggle-btn"
                 id="themeToggle"
                 onclick="toggleTheme()"
+                aria-label="Toggle color theme"
               >
                 <i class="bi bi-sun-fill" id="themeIcon"></i>
               </button>
@@ -83,10 +85,10 @@
         </div>
       </div>
     </nav>
-    <main class="container my-5 flex-grow-1" style="max-width: 950px">
+    <main class="container my-5 flex-grow-1 projects-page">
       <div class="row mb-4">
         <div class="col-12 text-center text-lg-start">
-          <h1 class="display-5 fw-bold" style="color: var(--accent-color)">
+          <h1 class="display-5 fw-bold accent-heading">
             Projects
           </h1>
           <p class="text-secondary">
@@ -102,8 +104,9 @@
             class="project-card d-flex flex-column flex-md-row align-items-stretch"
             data-bs-toggle="collapse"
             data-bs-target="#project1Collapse"
-            aria-expanded="false"
             aria-controls="project1Collapse"
+            tabindex="0"
+            role="button"
           >
             <div class="project-img-wrapper">
               <img
@@ -281,6 +284,7 @@
                 <a
                   href="https://github.com/egesoysal/skygate-login-register-flutter-dart-learn-project"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="text-decoration-none"
                 >
                   <span
@@ -303,7 +307,6 @@
             class="project-card d-flex flex-column flex-md-row align-items-stretch"
             data-bs-toggle="collapse"
             data-bs-target="#project2Collapse"
-            aria-expanded="false"
             aria-controls="project2Collapse"
           >
             <div class="project-img-wrapper">
@@ -416,6 +419,7 @@
                 <a
                   href="https://github.com/EgeSoysal/Music-Player-ui-html-css"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="text-decoration-none"
                 >
                   <span
@@ -436,12 +440,10 @@
         <div class="card-wrapper">
           <!-- Tetikleyici Kart Yapısı -->
           <div
-            class="project-card d-flex flex-column flex-md-row align-items-stretch"
+            class="project-card d-flex flex-column flex-md-row align-items-stretch project-card-trigger"
             data-bs-toggle="collapse"
             data-bs-target="#project3Collapse"
-            aria-expanded="false"
             aria-controls="project3Collapse"
-            style="cursor: pointer"
           >
             <div class="project-img-wrapper">
               <!-- Çift tırnak hatası temizlendi -->
@@ -570,6 +572,7 @@
                 <a
                   href="https://drive.google.com/file/d/1jyFAxaYCE9s1sWAeufudpgZMtIZxPyMr/view?usp=sharing"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="text-decoration-none text-info"
                 >
                   👉 View Full Research.1 Document
@@ -605,6 +608,7 @@
                 <a
                   href="https://drive.google.com/file/d/1tijTx0fWOHJG0YT-Kk0yNMqn_lKC8d3J/view?usp=sharing"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="text-decoration-none text-info"
                 >
                   👉 View Full Research.2 Document
@@ -626,6 +630,7 @@
                 <a
                   href="https://github.com/EgeSoysal/ai-experiments-and-research"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="text-decoration-none"
                 >
                   <span
@@ -649,7 +654,6 @@
             class="project-card d-flex flex-column flex-md-row align-items-stretch"
             data-bs-toggle="collapse"
             data-bs-target="#project4Collapse"
-            aria-expanded="false"
             aria-controls="project4Collapse"
           >
             <div class="project-img-wrapper">
@@ -773,6 +777,7 @@
                 <a
                   href="https://github.com/EgeSoysal/CSharp-3Level-Puzzle-Sudoku"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="text-decoration-none"
                 >
                   <span
@@ -796,7 +801,6 @@
             class="project-card d-flex flex-column flex-md-row align-items-stretch"
             data-bs-toggle="collapse"
             data-bs-target="#project5Collapse"
-            aria-expanded="false"
             aria-controls="project5Collapse"
           >
             <div class="project-img-wrapper">
@@ -935,6 +939,7 @@
                 <a
                   href="https://github.com/EgeSoysal/bootstrap-portfolio-template"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="text-decoration-none"
                 >
                   <span
