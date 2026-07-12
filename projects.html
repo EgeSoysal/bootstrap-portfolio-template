@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects</title>
-    <link rel="icon" type="image/x-icon" href="assets/images/logo.ico" />
+    <link rel="icon" type="image/x-icon" href="https://picsum.photos/seed/portfolio-favicon/64/64">
 
 
     <!-- Bootstrap CSS link -->
@@ -17,13 +17,13 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" /> <!--dosyadan boostrap bağlama-->
 
 
-    <!-- Bootstrap Icons link atama -->
+    <!-- Bootstrap Icons link -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
 
-    <link rel="stylesheet" href="assets/css/style.css" /> <!--Harici css-->
+    <link rel="stylesheet" href="assets/css/style.css" /> <!--External CSS-->
 
     <!-- Page-specific styles moved to assets/css/style.css -->
   </head>
@@ -37,7 +37,7 @@
           href="index.html"
         >
           <img src="" alt="Logo" width="40" height="40" />
-          <span class="fw-bold tracking-wide">SOYSAL.DEV</span>
+          <span class="fw-bold tracking-wide">Developer Portfolio</span>
         </a>
         <button
           class="navbar-toggler"
@@ -91,867 +91,97 @@
     <main class="container my-5 flex-grow-1 projects-page">
       <div class="row mb-4">
         <div class="col-12 text-center text-lg-start">
-          <h1 class="display-5 fw-bold accent-heading">
-            Projects
-          </h1>
-          <p class="text-secondary">
-            Software projects I developed, independent research, and technical
-            studies.
-          </p>
+          <h1 class="display-5 fw-bold accent-heading">Selected Projects</h1>
+          <p class="text-secondary">Use this page to highlight case studies, product experiments, or client work with a lightweight and editable layout.</p>
         </div>
       </div>
 
       <div class="d-flex flex-column gap-4">
         <div class="card-wrapper">
-          <div
-            class="project-card d-flex flex-column flex-md-row align-items-stretch"
-            data-bs-toggle="collapse"
-            data-bs-target="#project1Collapse"
-            aria-controls="project1Collapse"
-            tabindex="0"
-            role="button"
-          >
+          <div class="project-card d-flex flex-column flex-md-row align-items-stretch" data-bs-toggle="collapse" data-bs-target="#project1Collapse" aria-controls="project1Collapse" tabindex="0" role="button">
             <div class="project-img-wrapper">
-              <img
-                src=""skygate_projects.png"
-                alt="Project 1 Mockup"
-                onerror="this.src = 'https://picsum.photos/400/300?random=1'"
-              />
+              <img src="" alt="Project preview" data-width="800" data-height="500">
             </div>
-            <div
-              class="p-4 flex-grow-1 d-flex flex-column justify-content-between"
-            >
+            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
               <div>
-                <div
-                  class="d-flex justify-content-between align-items-start mb-2"
-                >
-                  <h3 class="h4 fw-bold mb-0">
-                    skygate-login-register-flutter-dart-learn-project
-                  </h3>
-                  <i
-                    class="bi bi-chevron-down text-secondary toggle-icon fs-5"
-                  ></i>
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="h4 fw-bold mb-0">Project One</h3>
+                  <i class="bi bi-chevron-down text-secondary toggle-icon fs-5"></i>
                 </div>
-                <p class="text-secondary small mb-3">
-                  Clean Architecture Proof-of-Concept (PoC) featuring simulated
-                  aviation domain business logic and a lightweight Mock
-                  Authentication mechanism for role validation.
-                </p>
+                <p class="text-secondary small mb-3">Describe the challenge, your role, and the result in a few short lines.</p>
               </div>
               <div class="d-flex flex-wrap gap-2">
-
-                <!--altına framework/tool etiketi açar-->
-                <span
-                  class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill"
-                  >Flutter</span
-                >
-                <span
-                  class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill"
-                  >Dart</span
-                >
-                <span
-                  class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill"
-                  >Firebase</span
-                >
+                <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill">React</span>
+                <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill">TypeScript</span>
+                <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill">UI Design</span>
               </div>
             </div>
           </div>
-
-
-
-
           <div class="collapse" id="project1Collapse">
             <div class="project-details p-4 rounded-bottom">
-
-              <!-- Ana Başlık -->
-              <h2 class="border-bottom pb-2 mb-3">
-                SkyGate - Crew Access Portal 🛫
-              </h2>
-
-              <p class="text-secondary">
-                A
-                <strong>Clean Architecture Proof-of-Concept (PoC)</strong>
-                featuring simulated aviation domain business logic and a
-                lightweight Mock Authentication mechanism for role validation.
-                Built with Flutter and Dart, following enterprise-level loose
-                coupling principles.
-              </p>
-
-              <p class="text-secondary mb-4">
-                This project serves as a showcase of architectural discipline,
-                transforming abstract authentication flows into a concrete,
-                domain-driven enterprise solution without relying on external
-                cloud dependencies.
-              </p>
-
-              <!-- Alt Başlık 1 -->
-              <h4 class="mt-4 mb-3">
-                🏗️ Architectural Blueprint & Key Features
-              </h4>
-              <p class="text-secondary">
-                Driven by the instruction style of Vandad Nahavandipoor, the
-                project isolates the user interface from the authentication
-                source using strict abstraction layers.
-              </p>
-
-              <!-- Maddeli Bölüm 1 -->
-              <h5 class="mt-3 text-white">
-                1. Loose Coupling via Authentication Abstraction
-              </h5>
-              <ul class="text-secondary">
-                <li class="mb-2">
-                  <strong>AuthProvider (Interface):</strong> An abstract
-                  contract establishing the core authentication protocol
-                  (<code>logIn</code>, <code>createUser</code>,
-                  <code>logOut</code>, <code>sendEmailVerification</code>). The
-                  UI layer interacts <em>only</em> with this contract,
-                  completely unaware of the underlying database technology.
-                </li>
-                <li class="mb-2">
-                  <strong>MockAuthProvider:</strong> A memory-driven (RAM)
-                  simulation engine that mimics real-world backend behavior,
-                  including network delays (<code>Future.delayed</code>) and
-                  domain-specific exception throwing.
-                </li>
-                <li class="mb-2">
-                  <strong>AuthService (Wrapper):</strong> A factory-driven layer
-                  acting as the singular gateway for the application, ensuring
-                  that swapping the Mock engine with real Firebase production
-                  code requires changing exactly
-                  <strong>one line of code</strong>.
-                </li>
+              <h2 class="border-bottom pb-2 mb-3">Project One</h2>
+              <p class="text-secondary">Replace this content with a short overview of the problem, your approach, and the outcome. Add links, screenshots, or a quick summary of what made the project meaningful.</p>
+              <ul class="text-secondary mt-3">
+                <li class="mb-2">Challenge: describe the opportunity or problem.</li>
+                <li class="mb-2">Approach: mention the workflow, tools, and decisions.</li>
+                <li class="mb-2">Outcome: share the result, impact, or what you learned.</li>
               </ul>
-
-              <!-- Maddeli Bölüm 2 -->
-              <h5 class="mt-4 text-white">
-                2. Robust Flow Guarding & Advanced UX (Chapter 22 & 23 Patterns)
-              </h5>
-              <ul class="text-secondary">
-                <li class="mb-2">
-                  <strong>Auth Flow Guard:</strong> A logic barrier embedded
-                  inside the <code>FutureBuilder</code> orchestration level.
-                  Technicians can register, but they are strictly blocked from
-                  accessing sensitive flight logs until their corporate email
-                  status is verified.
-                </li>
-                <li class="mb-2">
-                  <strong>Anti-Stuck UX Pattern:</strong> Resolves the classic
-                  screen-lock antipattern by introducing a synchronized
-                  <code>Restart</code> mechanism that safely clears the
-                  in-memory user states and recovers the initial authentication
-                  route.
-                </li>
-              </ul>
-
-              <!-- Maddeli Bölüm 3 -->
-              <h5 class="mt-4 text-white">
-                3. Production-Ready Code Standards
-              </h5>
-              <ul class="text-secondary">
-                <li class="mb-2">
-                  <strong>Centralized Routing Engine:</strong> Zero hardcoded
-                  string routes. Entire navigation tree is cataloged within
-                  <code>lib/constants/routes.dart</code>.
-                </li>
-                <li class="mb-2">
-                  <strong>Reusable UI Components:</strong> Modular error
-                  handling dialogs completely abstracted out of the view layer
-                  into <code>lib/utilities/</code>.
-                </li>
-                <li class="mb-2">
-                  <strong>Zero Print Policy:</strong> Eradicated standard
-                  <code>print()</code> statements in favor of structured
-                  <code>dart:developer</code> logging for professional DevTools
-                  inspection.
-                </li>
-              </ul>
-
-              <!-- Alt Başlık 2 -->
-              <h4 class="mt-4 mb-3">🛠️ Tech Stack & Testing Environment</h4>
-              <ul class="text-secondary mb-4">
-                <li class="mb-1">
-                  <strong>Framework:</strong> Flutter (Material 3)
-                </li>
-                <li class="mb-1">
-                  <strong>Language:</strong> Dart (Strict Null Safety & OOP)
-                </li>
-                <li class="mb-1">
-                  <strong>Hardware Testbed:</strong> Samsung Galaxy Tab S6 Lite
-                  (SM-P620)
-                </li>
-                <li class="mb-1">**Mirror</li>
-                <li class="mb-1">Anam babam usülü</li>
-              </ul>
-              <!-- GitHub Butonu -->
-              <div class="mt-4">
-                <a
-                  href="https://github.com/egesoysal/skygate-login-register-flutter-dart-learn-project"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-decoration-none"
-                >
-                  <span
-                    class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill p-2 px-3 fs-6"
-                  >
-                    <i class="bi bi-github me-1"></i> GitHub Repo
-                  </span>
-                </a>
-              </div>
             </div>
           </div>
         </div>
 
-
-
-
-        <!-- Project 2 -->
         <div class="card-wrapper">
-          <div
-            class="project-card d-flex flex-column flex-md-row align-items-stretch"
-            data-bs-toggle="collapse"
-            data-bs-target="#project2Collapse"
-            aria-controls="project2Collapse"
-          >
+          <div class="project-card d-flex flex-column flex-md-row align-items-stretch" data-bs-toggle="collapse" data-bs-target="#project2Collapse" aria-controls="project2Collapse" tabindex="0" role="button">
             <div class="project-img-wrapper">
-              <img
-                src=""musicplayer_projects.png"
-                alt="Project 2 Mockup"
-                onerror="this.src = 'https://picsum.photos/400/300?random=2'"
-              />
+              <img src="" alt="Project preview" data-width="800" data-height="500">
             </div>
-            <div
-              class="p-4 flex-grow-1 d-flex flex-column justify-content-between"
-            >
+            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
               <div>
-                <div
-                  class="d-flex justify-content-between align-items-start mb-2"
-                >
-                  <h3 class="h4 fw-bold mb-0">Music-Player-ui-html-css</h3>
-                  <i
-                    class="bi bi-chevron-down text-secondary toggle-icon fs-5"
-                  ></i>
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="h4 fw-bold mb-0">Project Two</h3>
+                  <i class="bi bi-chevron-down text-secondary toggle-icon fs-5"></i>
                 </div>
-                <p class="text-secondary small mb-3">
-                  A static Spotify Web Player user interface built using HTML
-                  and CSS, focusing on layout, styling, and UI structure.
-                </p>
+                <p class="text-secondary small mb-3">Use this card to showcase a second project or a smaller experiment you want to highlight.</p>
               </div>
               <div class="d-flex flex-wrap gap-2">
-                <span
-                  class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill"
-                  >HTML 5</span
-                >
-                <span
-                  class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill"
-                  >CSS</span
-                >
-                <span
-                  class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill"
-                  >Java Script</span
-                >
+                <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill">Next.js</span>
+                <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill">API</span>
+                <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill">Product</span>
               </div>
             </div>
           </div>
           <div class="collapse" id="project2Collapse">
             <div class="project-details p-4 rounded-bottom">
-              <h2 class="border-bottom pb-2 mb-3">Spotify UI HTML & CSS</h2>
-              <p class="text-secondary">
-                A <strong>static user interface project</strong> inspired by the
-                Spotify Web Player, built using pure HTML and CSS.
-              </p>
-
-              <p class="text-secondary mb-4">
-                This project focuses on layout structure, styling, and modern UI
-                design principles. It is UI-only and does not include any
-                backend logic, JavaScript functionality, or real music playback.
-              </p>
-
-              <!-- Alt Başlık 1 -->
-              <h4 class="mt-4 mb-3">📌 Project Overview</h4>
-              <p class="text-secondary">
-                The goal of this project is to practice and recreate the visual
-                layout of a music streaming web player similar to Spotify:
-              </p>
-
-              <!-- Maddeli Bölüm 1 -->
-              <ul class="text-secondary">
-                <li class="mb-2">
-                  <strong>HTML semantic structure:</strong> Well-structured code
-                  utilizing proper layout tags.
-                </li>
-                <li class="mb-2">
-                  <strong>CSS layout techniques:</strong> Implementation using
-                  Flexbox and CSS Grid.
-                </li>
-                <li class="mb-2">
-                  <strong>Responsive UI design:</strong> Adaptive layout
-                  adjustments across various viewports.
-                </li>
-                <li class="mb-2">
-                  <strong>Component-based styling:</strong> Clean, reusable, and
-                  readable styling organization.
-                </li>
-              </ul>
-
-              <!-- Maddeli Bölüm 2 -->
-              <h5 class="mt-4 text-white">🛠️ Technologies Used</h5>
-              <ul class="text-secondary">
-                <li class="mb-2">
-                  <strong>HTML5:</strong> Semantic structure layout.
-                </li>
-                <li class="mb-2">
-                  <strong>CSS3:</strong> Advanced styling featuring Flexbox,
-                  Grid, custom scrollbars, hover effects, and responsive design.
-                </li>
-                <li class="mb-2">
-                  <strong>No Frameworks:</strong> Built with zero JavaScript,
-                  external libraries, or modern frameworks.
-                </li>
-              </ul>
-
-              <!-- Alt Başlık 2 -->
-              <h4 class="mt-4 mb-3">💻 Tech Stack & Repository Stats</h4>
-              <ul class="text-secondary mb-4">
-                <li class="mb-1"><strong>HTML:</strong> 58.6%</li>
-                <li class="mb-1"><strong>CSS:</strong> 41.4%</li>
-                <li class="mb-1"><strong>Contributors:</strong> Ege Soysal</li>
-              </ul>
-
-              <!-- GitHub Butonu -->
-              <div class="mt-4">
-                <a
-                  href="https://github.com/EgeSoysal/Music-Player-ui-html-css"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-decoration-none"
-                >
-                  <span
-                    class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill p-2 px-3 fs-6"
-                  >
-                    <i class="bi bi-github me-1"></i> GitHub Repo
-                  </span>
-                </a>
-              </div>
+              <h2 class="border-bottom pb-2 mb-3">Project Two</h2>
+              <p class="text-secondary">This area is ready for a deeper explanation, links to a repository, or notes on the lessons you learned while building it.</p>
             </div>
           </div>
         </div>
 
-
-
-
-        <!-- Project 3 -->
         <div class="card-wrapper">
-          <!-- Tetikleyici Kart Yapısı -->
-          <div
-            class="project-card d-flex flex-column flex-md-row align-items-stretch project-card-trigger"
-            data-bs-toggle="collapse"
-            data-bs-target="#project3Collapse"
-            aria-controls="project3Collapse"
-          >
+          <div class="project-card d-flex flex-column flex-md-row align-items-stretch" data-bs-toggle="collapse" data-bs-target="#project3Collapse" aria-controls="project3Collapse" tabindex="0" role="button">
             <div class="project-img-wrapper">
-              <!-- Çift tırnak hatası temizlendi -->
-              <img
-                src=""res_projects.png"
-                alt="Project 3 Mockup"
-                onerror="this.src = 'https://picsum.photos/400/300?random=3'"
-              />
+              <img src="" alt="Project preview" data-width="800" data-height="500">
             </div>
-            <div
-              class="p-4 flex-grow-1 d-flex flex-column justify-content-between"
-            >
+            <div class="p-4 flex-grow-1 d-flex flex-column justify-content-between">
               <div>
-                <div
-                  class="d-flex justify-content-between align-items-start mb-2"
-                >
-                  <h3 class="h4 fw-bold mb-0">ai-experiments-and-research</h3>
-                  <i
-                    class="bi bi-chevron-down text-secondary toggle-icon fs-5"
-                  ></i>
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="h4 fw-bold mb-0">Project Three</h3>
+                  <i class="bi bi-chevron-down text-secondary toggle-icon fs-5"></i>
                 </div>
-                <p class="text-secondary small mb-3">
-                  Independent AI research focused on practical and lightweight
-                  experiments, human AI interaction, simple model behaviors, and
-                  exploratory studies in machine learning. A collection of
-                  small-scale analyses, prototypes, and observations aimed at
-                  understanding how AI systems interact with users and
-                  real-world scenarios.
-                </p>
+                <p class="text-secondary small mb-3">Add a short summary for any recent launch, prototype, or personal build that you want visitors to discover.</p>
               </div>
               <div class="d-flex flex-wrap gap-2">
-                <span
-                  class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill"
-                  >LLM</span
-                >
-                <span
-                  class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill"
-                  >ChatGPT</span
-                >
-                <span
-                  class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill"
-                  >Gemini</span
-                >
-                <span
-                  class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill"
-                  >Copilot</span
-                >
+                <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill">Python</span>
+                <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill">Automation</span>
+                <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill">Open Source</span>
               </div>
             </div>
           </div>
-
-          <!-- Açılır Detay Paneli -->
           <div class="collapse" id="project3Collapse">
             <div class="project-details p-4 rounded-bottom">
-              <h2 class="border-bottom pb-2 mb-3">
-                ai-experiments-and-research 🧠
-              </h2>
-
-              <p class="text-secondary">
-                Independent <strong>AI research</strong> focused on practical
-                and lightweight experiments, human-AI interaction, simple model
-                behaviors, and exploratory studies in machine learning.
-              </p>
-
-              <p class="text-secondary mb-4">
-                A collection of small-scale analyses, prototypes, and
-                observations aimed at understanding how AI systems interact with
-                users and real-world scenarios.
-              </p>
-
-              <!-- Alt Başlık 1 -->
-              <h4 class="mt-4 mb-3">🔍 Research Focus Areas & Goals</h4>
-              <p class="text-secondary">
-                This repository serves as a personal research space to observe
-                and document meaningful patterns in AI behavior without building
-                large production systems.
-              </p>
-
-              <!-- Maddeli Bölüm 1 -->
-              <h5 class="mt-3 text-white">1. Core Objectives</h5>
-              <ul class="text-secondary">
-                <li class="mb-2">
-                  <strong>Human & AI Interaction:</strong> Understanding
-                  communication patterns and behavior shaping between users and
-                  AI systems.
-                </li>
-                <li class="mb-2">
-                  <strong>Interpretable Behaviors:</strong> Evaluating minimal
-                  examples, edge cases, and behavior-driven tests for model
-                  alignment.
-                </li>
-                <li class="mb-2">
-                  <strong>Lightweight Experiments:</strong> Developing quick,
-                  real-world oriented tests and small prototype interactions.
-                </li>
-              </ul>
-
-              <!-- Maddeli Bölüm 2 -->
-              <h5 class="mt-4 text-white">
-                2. Research.1: Comparative Analysis of AI Models
-              </h5>
-              <p class="text-secondary">
-                A comparative evaluation of ChatGPT, Gemini, and Copilot tested
-                across three multimodal skill areas:
-              </p>
-              <ul class="text-secondary">
-                <li class="mb-2">
-                  <strong>Photo Generation:</strong> Gemini performed the
-                  fastest with balanced quality; ChatGPT showed high
-                  interpretative accuracy but lower fidelity; Copilot responded
-                  significantly slower.
-                </li>
-                <li class="mb-2">
-                  <strong>Software Development:</strong> Models were tasked to
-                  build a C# To-Do List app. Gemini added interactive
-                  checkboxes, ChatGPT produced the most logical structure, and
-                  Copilot generated a basic layout.
-                </li>
-                <li class="mb-2">
-                  <strong>Mathematical Reasoning:</strong> All models solved the
-                  tax problem correctly, with Copilot leading in total
-                  computational speed.
-                </li>
-              </ul>
-              <div class="mb-3">
-                <a
-                  href="https://drive.google.com/file/d/1jyFAxaYCE9s1sWAeufudpgZMtIZxPyMr/view?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-decoration-none text-info"
-                >
-                  👉 View Full Research.1 Document
-                </a>
-              </div>
-
-              <!-- Maddeli Bölüm 3 -->
-              <h5 class="mt-4 text-white">
-                3. Research.2: Evolution of Software Industry Roles
-              </h5>
-              <p class="text-secondary">
-                An examination of how AI reshapes software and IT jobs within a
-                15-year prediction window (2025–2040):
-              </p>
-              <ul class="text-secondary">
-                <li class="mb-2">
-                  <strong>Declining Roles:</strong> Routine positions such as
-                  Junior Developer, Manual QA, and L1 Support face automation
-                  risks due to AI-generated code and autonomous testing.
-                </li>
-                <li class="mb-2">
-                  <strong>Transforming Roles:</strong> Traditional operational
-                  positions adapt toward infrastructure automation (e.g.,
-                  SysAdmin to CloudOps, DBA to Data Architecture).
-                </li>
-                <li class="mb-2">
-                  <strong>Emerging Roles:</strong> New specialized positions
-                  appear including AI Agent Orchestrator, LLMOps Engineer, and
-                  Generative AI Security Expert.
-                </li>
-              </ul>
-              <div class="mb-3">
-                <a
-                  href="https://drive.google.com/file/d/1tijTx0fWOHJG0YT-Kk0yNMqn_lKC8d3J/view?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-decoration-none text-info"
-                >
-                  👉 View Full Research.2 Document
-                </a>
-              </div>
-
-              <!-- Alt Başlık 2 -->
-              <h4 class="mt-4 mb-3">📜 Project Standards & License</h4>
-              <ul class="text-secondary mb-4">
-                <li class="mb-1">
-                  <strong>Project Intent:</strong> Observational studies and
-                  idea-driven prototypes
-                </li>
-                <li class="mb-1"><strong>License:</strong> MIT License</li>
-              </ul>
-
-              <!-- GitHub Butonu (Repository linki bağlandı) -->
-              <div class="mt-4">
-                <a
-                  href="https://github.com/EgeSoysal/ai-experiments-and-research"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-decoration-none"
-                >
-                  <span
-                    class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill p-2 px-3 fs-6"
-                  >
-                    <i class="bi bi-github me-1"></i> GitHub Repo
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
-        <!-- Project 4 -->
-        <div class="card-wrapper">
-          <div
-            class="project-card d-flex flex-column flex-md-row align-items-stretch"
-            data-bs-toggle="collapse"
-            data-bs-target="#project4Collapse"
-            aria-controls="project4Collapse"
-          >
-            <div class="project-img-wrapper">
-              <img
-                src=""sudoku_projects.png"
-                alt="Project 4 Mockup"
-                onerror="this.src = 'https://picsum.photos/400/300?random=4'"
-              />
-            </div>
-            <div
-              class="p-4 flex-grow-1 d-flex flex-column justify-content-between"
-            >
-              <div>
-                <div
-                  class="d-flex justify-content-between align-items-start mb-2"
-                >
-                  <h3 class="h4 fw-bold mb-0">CSharp-3Level-Puzzle-Sudoku</h3>
-                  <i
-                    class="bi bi-chevron-down text-secondary toggle-icon fs-5"
-                  ></i>
-                </div>
-                <p class="text-secondary small mb-3">
-                  Multi level console Sudoku and Latin Square project written in
-                  C#. It includes a 3x3 beginner level, a scalable 6x6
-                  intermediate structure, and a planned 9x9 full Sudoku system.
-                  The game uses separate solution and play matrices, enforces
-                  row and column rules, supports random generation, and is
-                  designed for future expansion.
-                </p>
-              </div>
-              <div class="d-flex flex-wrap gap-2">
-                <span
-                  class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill"
-                  >C#</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="collapse" id="project4Collapse">
-            <div class="project-details p-4 rounded-bottom">
-              <h2 class="border-bottom pb-2 mb-3">
-                CSharp-3Level-Puzzle-Sudoku 🧩
-              </h2>
-
-              <p class="text-secondary">
-                Multi-level
-                <strong>console Sudoku and Latin Square</strong> project written
-                in C#, designed for algorithmic training and continuous
-                expansion.
-              </p>
-
-              <p class="text-secondary mb-4">
-                The game implements strict matrix synchronization, enforcing
-                distinct play and solution states while managing core puzzle
-                validation rules directly via the command-line interface.
-              </p>
-
-              <!-- Alt Başlık 1 -->
-              <h4 class="mt-4 mb-3">🏗️ Roadmap & Architecture</h4>
-              <p class="text-secondary">
-                The codebase splits mathematical grid generation from state
-                enforcement, structuring logical validation over progressive
-                difficulty tiers:
-              </p>
-
-              <!-- Maddeli Bölüm 1 -->
-              <h5 class="mt-3 text-white">1. Core Mechanics</h5>
-              <ul class="text-secondary">
-                <li class="mb-2">
-                  <strong>Dual-Matrix Flow:</strong> Utilizes separate execution
-                  pipelines for the solution engine and the dynamic game loop
-                  layers.
-                </li>
-                <li class="mb-2">
-                  <strong>Constraint Enforcement:</strong> Actively checks
-                  horizontal and vertical array elements to block illegal
-                  placements in real-time.
-                </li>
-                <li class="mb-2">
-                  <strong>Procedural Generation:</strong> Supports pseudo-random
-                  map seeds to construct clean, unique layouts upon
-                  initialization.
-                </li>
-              </ul>
-
-              <!-- Maddeli Bölüm 2 -->
-              <h5 class="mt-4 text-white">2. Difficulty Progressions</h5>
-              <ul class="text-secondary">
-                <li class="mb-2">
-                  <strong>Basic Level (3x3):</strong> Compact starter
-                  configuration focused on Latin Square fundamentals and swift
-                  validation loops.
-                </li>
-                <li class="mb-2">
-                  <strong>Mid Level (6x6):</strong> Intermediate configuration
-                  establishing scalable sub-grid architectures for dynamic
-                  scaling.
-                </li>
-                <li class="mb-2">
-                  <strong>Full System (9x9):</strong> A planned flagship
-                  structure built to handle classical puzzle computations and
-                  deep row-column trees.
-                </li>
-              </ul>
-
-              <!-- Alt Başlık 2 -->
-              <h4 class="mt-4 mb-3">🛠️ Tech Stack & Versioning</h4>
-              <ul class="text-secondary mb-4">
-                <li class="mb-1">
-                  <strong>Language / Environment:</strong> C# (.NET Console
-                  Application)
-                </li>
-                <li class="mb-1">
-                  <strong>Latest Version:</strong> V.1 (Active Development
-                  Lifecycle)
-                </li>
-              </ul>
-
-              <!-- GitHub Butonu -->
-              <div class="mt-4">
-                <a
-                  href="https://github.com/EgeSoysal/CSharp-3Level-Puzzle-Sudoku"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-decoration-none"
-                >
-                  <span
-                    class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill p-2 px-3 fs-6"
-                  >
-                    <i class="bi bi-github me-1"></i> GitHub Repo
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
-        <!-- Project 5 -->
-        <div class="card-wrapper">
-          <div
-            class="project-card d-flex flex-column flex-md-row align-items-stretch"
-            data-bs-toggle="collapse"
-            data-bs-target="#project5Collapse"
-            aria-controls="project5Collapse"
-          >
-            <div class="project-img-wrapper">
-              <img
-                src=""bootstrap_projects.png"
-                alt="Project 5 Mockup"
-                onerror="this.src = 'https://picsum.photos/400/300?random=5'"
-              />
-            </div>
-            <div
-              class="p-4 flex-grow-1 d-flex flex-column justify-content-between"
-            >
-              <div>
-                <div
-                  class="d-flex justify-content-between align-items-start mb-2"
-                >
-                  <h3 class="h4 fw-bold mb-0">bootstrap-portfolio-template</h3>
-                  <i
-                    class="bi bi-chevron-down text-secondary toggle-icon fs-5"
-                  ></i>
-                </div>
-                <p class="text-secondary small mb-3">
-                  A clean, responsive personal portfolio template built with
-                  Bootstrap 5. Free to use and customize.
-                </p>
-              </div>
-              <div class="d-flex flex-wrap gap-2">
-                <span
-                  class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill"
-                  >Bootstrap 5</span
-                >
-                <span
-                  class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill"
-                  >Java Script</span
-                >
-                <span
-                  class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill"
-                  >HTML</span
-                >
-                <span
-                  class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill"
-                  >CSS</span
-                >
-                <span
-                  class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill"
-                  >Web Development</span
-                >
-              </div>
-            </div>
-          </div>
-          <div class="collapse" id="project5Collapse">
-            <div class="project-details p-4 rounded-bottom">
-              <h2 class="border-bottom pb-2 mb-3">
-                Bootstrap Responsive Portfolio Template 🚀
-              </h2>
-
-              <p class="text-secondary">
-                A modern, clean, and fully responsive personal portfolio website
-                template built with Bootstrap 5. Designed for software
-                developers, digital creators, and photographers who need a
-                structured and scalable web presence.
-              </p>
-
-              <p class="text-secondary mb-4">
-                The project focuses on modular page architecture, responsive UI
-                consistency, and lightweight performance, combining Bootstrap
-                grid system with custom JavaScript for theme control and
-                interactive components.
-              </p>
-
-              <!-- Architecture -->
-              <h4 class="mt-4 mb-3">🏗️ Architecture Overview</h4>
-              <p class="text-secondary">
-                Built on a multi-page structure where each section is isolated
-                for scalability, maintainability, and clean UI separation.
-              </p>
-
-              <h5 class="mt-3 text-white">Core System Design</h5>
-              <ul class="text-secondary">
-                <li class="mb-2">
-                  <strong>Modular Page System:</strong> Separate HTML pages for
-                  Home, About, Skills, Projects, Photography, Blog, and Contact.
-                </li>
-                <li class="mb-2">
-                  <strong>Theme Engine:</strong> JavaScript-based Dark/Light
-                  mode system using CSS variables for instant UI switching.
-                </li>
-                <li class="mb-2">
-                  <strong>Component-Based UI:</strong> Bootstrap 5 grid system
-                  with reusable card layouts and responsive sections.
-                </li>
-              </ul>
-
-              <!-- Features -->
-              <h5 class="mt-4 text-white">Key Features</h5>
-              <ul class="text-secondary">
-                <li class="mb-2">
-                  <strong>Fully Responsive Design:</strong> Optimized for
-                  mobile, tablet, and desktop devices using Bootstrap 5.
-                </li>
-                <li class="mb-2">
-                  <strong>Photography Gallery:</strong> Minimal grid system
-                  designed for visual portfolio presentation.
-                </li>
-                <li class="mb-2">
-                  <strong>Certificate System:</strong> JavaScript-powered
-                  modal/lightbox structure for credential display.
-                </li>
-                <li class="mb-2">
-                  <strong>Performance Focused:</strong> Built with vanilla
-                  CSS/JS and Bootstrap bundles for fast load times.
-                </li>
-              </ul>
-
-              <!-- Tech -->
-              <h4 class="mt-4 mb-3">🛠️ Tech Stack</h4>
-              <ul class="text-secondary mb-4">
-                <li class="mb-1">
-                  <strong>Frontend:</strong> HTML5, CSS3, Bootstrap 5
-                </li>
-                <li class="mb-1">
-                  <strong>JavaScript:</strong> Vanilla JS (Theme & UI
-                  interactions)
-                </li>
-                <li class="mb-1">
-                  <strong>Architecture:</strong> Multi-page static site
-                  structure
-                </li>
-                <li class="mb-1">
-                  <strong>Focus:</strong> Responsive design, modular UI,
-                  performance optimization
-                </li>
-              </ul>
-
-              <div class="mt-4">
-                <a
-                  href="https://github.com/EgeSoysal/bootstrap-portfolio-template"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-decoration-none"
-                >
-                  <span
-                    class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill p-2 px-3 fs-6"
-                  >
-                    <i class="bi bi-github me-1"></i> GitHub Repo
-                  </span>
-                </a>
-              </div>
+              <h2 class="border-bottom pb-2 mb-3">Project Three</h2>
+              <p class="text-secondary">You can replace this with a full case study or a short project note. The layout stays flexible so you can expand it as your portfolio grows.</p>
             </div>
           </div>
         </div>
@@ -964,7 +194,7 @@
       <div class="container">
         <div class="row align-items-center text-body-secondary small">
           <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-            &copy; 2026 Ege Soysal. All rights reserved. Built with Bootstrap 5.
+            &copy; 2026 Your Name. All rights reserved. Built with Bootstrap 5.
           </div>
           <div class="col-md-6 text-center text-md-end">
             <a href="#" class="text-decoration-none text-body-secondary me-3"
@@ -984,34 +214,36 @@
           <div class="col-12 text-center">
             <div class="d-flex justify-content-center gap-4 fs-4">
               <a
-                href="https://x.com/EgeeSoysal"
+                href="https://github.com/yourusername"
                 class="text-body-secondary"
-                title="Twitter"
-                ><i class="bi bi-twitter-x"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/soysalege"
-                class="text-body-secondary"
-                title="LinkedIn"
-                ><i class="bi bi-linkedin"></i
-              ></a>
-              <a
-                href="https://github.com/EgeSoysal"
-                class="text-body-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
                 title="GitHub"
                 ><i class="bi bi-github"></i
               ></a>
               <a
-                href="https://instagram.com/egesoysals"
+                href="https://www.linkedin.com/in/yourname"
                 class="text-body-secondary"
-                title="Instagram"
-                ><i class="bi bi-instagram"></i
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn"
+                ><i class="bi bi-linkedin"></i
               ></a>
               <a
-                href="https://discord.gg/szfgv8pNxR"
+                href="https://x.com/yourusername"
                 class="text-body-secondary"
-                title="Discord"
-                ><i class="bi bi-discord"></i
+                target="_blank"
+                rel="noopener noreferrer"
+                title="X"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/yourusername"
+                class="text-body-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Instagram"
+                ><i class="bi bi-instagram"></i
               ></a>
             </div>
           </div>

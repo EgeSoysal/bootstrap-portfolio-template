@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <link rel="icon" type="image/x-icon" href="assets/images/logo.ico"> <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="https://picsum.photos/seed/portfolio-favicon/64/64"> <!--favicon-->
 
     <!-- Bootstrap HTML link bağlantısı -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -22,7 +22,7 @@
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
                 <img src="" alt="Logo" width="40" height="40">
-                <span class="fw-bold tracking-wide">SOYSAL.DEV</span>
+                <span class="fw-bold tracking-wide">Developer Portfolio</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation" title="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -46,73 +46,35 @@
         </div>
     </nav>
     <main class="container my-5 flex-grow-1 blog-page">
-        
-        <div class="d-flex justify-content-between align-items-center mb-5">
-            <div>
-                <h1 class="display-5 fw-bold accent-heading">Blog</h1>
-                <p class="text-secondary mb-0">Thoughts, notes, and technical writings.</p>
-            </div>
-
-            <!--"Yeni Bir Gönderi Ekle" işlemini başlatan bir yüzen aksiyon butonu (FAB - Floating Action Button). -->
-            <button class="add-post-btn shadow" onclick="openCreateModal()" type="button" title="Add New Post" aria-label="Add new post">
-                <i class="bi bi-plus-lg fs-4"></i>
-            </button>
+        <div class="mb-5">
+            <h1 class="display-5 fw-bold accent-heading">Notes & Updates</h1>
+            <p class="text-secondary mb-0">A simple space for short thoughts, product updates, and reflections on modern AI tools.</p>
         </div>
 
-        <div class="d-flex flex-column gap-4" id="blogContainer">
-            </div>
+        <div class="d-flex flex-column gap-4">
+            <article class="blog-card p-4 shadow-sm">
+                <h2 class="h4 fw-bold mb-2">AI copilots are reshaping everyday work</h2>
+                <span class="text-secondary small d-block mb-3">12 July 2026</span>
+                <p class="text-body-secondary mb-0" style="white-space: pre-line; line-height: 1.7;">
+                    Modern AI copilots are moving from novelty to practical productivity tools. They help writers, developers, and analysts draft faster, summarize long documents, and turn rough ideas into usable output.
+                </p>
+            </article>
 
+            <article class="blog-card p-4 shadow-sm">
+                <h2 class="h4 fw-bold mb-2">Open-source AI models are accelerating innovation</h2>
+                <span class="text-secondary small d-block mb-3">10 July 2026</span>
+                <p class="text-body-secondary mb-0" style="white-space: pre-line; line-height: 1.7;">
+                    The rapid release of stronger open-weight models is lowering the barrier to entry for researchers and startups. This trend is making advanced AI tools more accessible and encouraging faster experimentation across industries.
+                </p>
+            </article>
+        </div>
     </main>
-    <!-- Modal: Create/Edit Post - açılır pencere, 'Add New Post' butonuyla görüntülenir -->
-    <div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="createPostModalLabel" aria-hidden="true">
-        <!-- Modal dialog (vertically centered) -->
-        <div class="modal-dialog modal-dialog-centered">
-            <!-- Modal content: başlık, gövde ve butonları barındırır -->
-            <div class="modal-content bg-body-tertiary border-secondary-subtle">
-                <!-- Modal header: başlık ve kapatma butonu -->
-                <div class="modal-header border-bottom-0">
-                    <h5 class="modal-title fw-bold" id="createPostModalLabel">Create New Post</h5>
-                    <!-- Kapatma butonu: modal'ı kapatır, değişiklikleri kaydetmez -->
-                    <button type="button" class="btn-close" data-bs-shadow="none" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <!-- Modal body: form alanını içerir -->
-                <div class="modal-body">
-                    <!-- Post formu: gönderi oluşturma ve düzenleme işlemlerini yönetir -->
-                    <form id="postForm">
-                        <!-- Gizli alan: düzenleme modunda hangi gönderinin açık olduğunu tutar -->
-                        <input type="hidden" id="editPostId" value="">
-
-                        <!-- Başlık alanı: gönderi için kullanıcı tarafından girilen başlık -->
-                        <div class="mb-3">
-                            <label for="postTitle" class="form-label small fw-bold">Title</label>
-                            <input type="text" class="form-control" id="postTitle" required placeholder="Enter post title...">
-                        </div>
-                        <!-- İçerik alanı: gönderinin metin içeriği -->
-                        <div class="mb-3">
-                            <label for="postContent" class="form-label small fw-bold">Description / Content</label>
-                            <textarea class="form-control" id="postContent" rows="4" required placeholder="Write something..."></textarea>
-                        </div>
-                        <!-- Görsel alanı: isteğe bağlı, boş bırakılırsa mevcut görsel korunur -->
-                        <div class="mb-3">
-                            <label for="postImage" class="form-label small fw-bold">Image (Leave blank to keep the current image or remain without an image)</label>
-                            <input class="form-control" type="file" id="postImage" accept="image/*">
-                        </div>
-                        <!-- İşlem butonları: Cancel -> modal kapatılır, Save -> form gönderilir -->
-                        <div class="text-end mt-4">
-                            <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-warning text-white fw-bold blog-save-btn">Save</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <footer class="bg-body-tertiary py-4 mt-auto">
         <div class="container">
             <div class="row align-items-center text-body-secondary small">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; 2026 Ege Soysal. All rights reserved. Built with Bootstrap 5.
+                    &copy; 2026 Your Name. All rights reserved. Built with Bootstrap 5.
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <a href="#" class="text-decoration-none text-body-secondary me-3">Privacy Policy</a>
@@ -123,11 +85,10 @@
             <div class="row">
             <div class="col-12 text-center">
                 <div class="d-flex justify-content-center gap-4 fs-4">
-                        <a href="https://x.com/EgeeSoysal" class="text-body-secondary" title="Twitter"><i class="bi bi-twitter-x"></i></a>
-                        <a href="https://www.linkedin.com/in/soysalege" class="text-body-secondary" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://github.com/EgeSoysal" class="text-body-secondary" title="GitHub"><i class="bi bi-github"></i></a>
-                        <a href="https://instagram.com/egesoysals" class="text-body-secondary" title="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="https://discord.gg/szfgv8pNxR" class="text-body-secondary" title="Discord"><i class="bi bi-discord"></i></a>
+                        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="text-body-secondary" title="GitHub"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener noreferrer" class="text-body-secondary" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://x.com/yourusername" target="_blank" rel="noopener noreferrer" class="text-body-secondary" title="X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer" class="text-body-secondary" title="Instagram"><i class="bi bi-instagram"></i></a>
                     </div>
             </div>
         </div>
@@ -137,198 +98,6 @@
     <script src="assets/js/main.js"></script>
     
     <script>
-        // Sayfa açıldığında verileri hafızadan yükle
-        document.addEventListener("DOMContentLoaded", () => {
-            loadPosts();
-        });
-
-        // Yeni Gönderi Butonuna Basıldığında Formu Sıfırla ve Başlığı Düzelt
-        function openCreateModal() {
-            document.getElementById('postForm').reset();
-            document.getElementById('editPostId').value = ""; // ID alanını temizle
-            document.getElementById('createPostModalLabel').innerText = "Create New Post";
-            
-            const modal = new bootstrap.Modal(document.getElementById('createPostModal'));
-            modal.show();
-        }
-
-        // Form Gönderildiğinde Tetiklenen Alan
-        document.getElementById('postForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const id = document.getElementById('editPostId').value;
-            const title = document.getElementById('postTitle').value;
-            const content = document.getElementById('postContent').value;
-            const imageFile = document.getElementById('postImage').files[0];
-
-            if (imageFile) {
-                const reader = new FileReader();
-                reader.onload = function(event) {
-                    processPost(id, title, content, event.target.result);
-                };
-                reader.readAsDataURL(imageFile);
-            } else {
-                // Düzenleme modundaysa ve yeni resim seçilmediyse eski resmi koru
-                let currentImage = null;
-                if (id) {
-                    const posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
-                    const existingPost = posts.find(p => p.id == id);
-                    if (existingPost) currentImage = existingPost.image;
-                }
-                processPost(id, title, content, currentImage);
-            }
-        });
-
-        // Yazıyı Ekleme veya Güncelleme Mantığı
-        function processPost(id, title, content, imageSrc) {
-            let posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
-
-            if (id) {
-                // DÜZENLEME (UPDATE) MODU
-                posts = posts.map(post => {
-                    if (post.id == id) {
-                        return {
-                            ...post,
-                            title: title,
-                            content: content,
-                            image: imageSrc
-                        };
-                    }
-                    return post;
-                });
-            } else {
-                // YENİ EKLEME (CREATE) MODU
-                const newPost = {
-                    id: Date.now(),
-                    title: title,
-                    content: content,
-                    image: imageSrc,
-                    date: new Date().toLocaleDateString('tr-TR')
-                };
-                posts.unshift(newPost);
-            }
-
-            localStorage.setItem('blogPosts', JSON.stringify(posts));
-
-            // Modalı Kapatma
-            const modalElement = document.getElementById('createPostModal');
-            const modal = bootstrap.Modal.getInstance(modalElement) || bootstrap.Modal.getOrCreateInstance(modalElement);
-            modal.hide();
-
-            loadPosts();
-        }
-
-        // Yazıyı Düzenleme Moduna Alıp Modalı Açan Fonksiyon
-        function editPost(id) {
-            const posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
-            const post = posts.find(p => p.id == id);
-
-            if (post) {
-                document.getElementById('editPostId').value = post.id;
-                document.getElementById('postTitle').value = post.title;
-                document.getElementById('postContent').value = post.content;
-                document.getElementById('createPostModalLabel').innerText = "Edit Post";
-
-                const modalElement = document.getElementById('createPostModal');
-                const modal = bootstrap.Modal.getInstance(modalElement) || bootstrap.Modal.getOrCreateInstance(modalElement);
-                modal.show();
-            }
-        }
-
-        // Yazıyı Hafızadan Silen Fonksiyon
-        function deletePost(id) {
-            if (confirm("Are you sure you want to delete this blog post?")) {
-                let posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
-                posts = posts.filter(post => post.id != id);
-                localStorage.setItem('blogPosts', JSON.stringify(posts));
-                loadPosts();
-            }
-        }
-
-        // Gönderileri Arayüze Basma Motoru
-        function loadPosts() {
-            const container = document.getElementById('blogContainer');
-            let posts = JSON.parse(localStorage.getItem('blogPosts')) || [];
-
-            // Eğer lokal hafıza tamamen boşsa şablon olarak 2 örnek yükle
-            if (posts.length === 0) {
-                posts = [
-                    {
-                        id: 111,
-                        title: "Yazılım Dünyasında Minimalizm",
-                        content: "Kod yazarken karmaşadan kaçınmak ve her şeyi en sade haliyle tasarlamak hem performansı artırır hem de maintain etmeyi kolaylaştırır. Fonksiyonel tasarımlar her zaman kazanır.",
-                        image: "", 
-                        date: "20.05.2026"
-                    },
-                    {
-                        id: 222,
-                        title: "Işığı Yakalamak",
-                        content: "Fotoğrafçılıkta kompozisyon ve geometrik hatlar, sadece bir resmi değil o anın tüm hissini taşır. Doğru ışık, sıradan bir sokağı sanata dönüştürebilir.",
-                        image: null, 
-                        date: "18.05.2026"
-                    }
-                ];
-                localStorage.setItem('blogPosts', JSON.stringify(posts));
-            }
-
-            // Temizle: önce konteynerin içeriğini sıfırla (eski gönderi kartlarını kaldırır)
-            container.innerHTML = "";
-
-            // Gönderileri render et: localStorage'daki her post nesnesi için HTML oluşturup ekler
-            posts.forEach(post => {
-                // Görsel HTML'i için boş bir değişken hazırla; varsa alt blok doldurur
-                let imageHTML = "";
-                if (post.image) {
-                    // Görsel mevcutsa bu HTML kullanılacak. onerror ile yüklenemezse kapsayıcı gizlenir.
-                    imageHTML = `
-                        <div class="blog-img-wrapper mb-3">
-                            <img src="${post.image}" alt="${post.title}" onerror="this.parentElement.style.display='none'">
-                        </div>
-                    `;
-                }
-
-                // Her gönderi için ana kart HTML'i: başlık, tarih, işlem menüsü ve içerik
-                const cardHTML = `
-                    <article class="blog-card p-4 shadow-sm" data-id="${post.id}">
-                        <div class="d-flex justify-content-between align-items-start mb-2">
-                            <div>
-                                <h2 class="h4 fw-bold mb-1">${post.title}</h2>
-                                <span class="text-secondary small d-block mb-2">${post.date}</span>
-                            </div>
-                            
-
-
-                            <!-- İşlem menüsü: düzenleme ve silme eylemleri barındırır -->
-
-                            <div class="dropdown">
-                                <button class="post-menu-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi bi-three-dots-vertical"></i>
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-end shadow border-secondary-subtle">
-                                    <li>
-                                        <a class="dropdown-item d-flex align-items-center gap-2" href="#" onclick="editPost(${post.id}); return false;">
-                                            <i class="bi bi-pencil small text-warning"></i> Edit
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item d-flex align-items-center gap-2 text-danger" href="#" onclick="deletePost(${post.id}); return false;">
-                                            <i class="bi bi-trash small"></i> Delete
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        ${imageHTML}
-                        <p class="text-body-secondary mb-0" style="white-space: pre-line; line-height: 1.7;">${post.content}</p>
-                    </article>
-                `;
-
-                // Oluşturulan kartı konteynere ekle
-                container.innerHTML += cardHTML;
-            });
-        }
-
-        // Tema Yönetimi
         function toggleTheme() {
             const htmlTag = document.documentElement;
             const themeIcon = document.getElementById('themeIcon');
