@@ -272,7 +272,7 @@ footer {
 /* --- ANA SAYFA (HERO) ÖZEL STİLLERİ --- */
 .hero-section {
     min-height: calc(100vh - 90px); /* Navbar yüksekliğini çıkar */
-    background-image: url('../images/dev.png');
+    background-image: url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1600&q=80');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
