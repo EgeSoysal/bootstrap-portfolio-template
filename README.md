@@ -58,8 +58,8 @@ git status
 git add .
 git commit -m "refactor: convert personal portfolio into reusable bootstrap template"
 git push
-git tag v3.6.7
-git push origin v3.6.7
+git tag v3.6.8
+git push origin v3.6.8
 git push --tags
 
 v1 --> Ana Sürüm

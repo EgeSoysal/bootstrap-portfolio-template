@@ -137,14 +137,14 @@
     <script src="assets/js/main.js"></script>
     
     <script>
-        // Yıllara Göre Filtreleme Scripti
+        // Year based Filtering Script
         function filterYear(year, element) {
             // Linklerin aktiflik durumunu değiştir
             const links = document.querySelectorAll('#filterMenu .nav-link');
             links.forEach(link => link.classList.remove('active'));
             element.classList.add('active');
 
-            // Kartları filtrele
+            // Card Filtering
             const cards = document.querySelectorAll('#galleryWrapper .gallery-card');
             cards.forEach(card => {
                 if (year === 'all' || card.getAttribute('data-year') === year) {
@@ -155,7 +155,7 @@
             });
         }
 
-        // Tema Değiştirici
+        // Switch Theme
         function toggleTheme() {
             const htmlTag = document.documentElement;
             const themeIcon = document.getElementById('themeIcon');
